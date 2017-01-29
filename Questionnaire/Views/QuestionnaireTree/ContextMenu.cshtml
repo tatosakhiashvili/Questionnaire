@@ -1,0 +1,31 @@
+﻿
+@{
+	Layout = null;
+	var isAdmin = QuestionnaireContext.Current.IsInRole("admin");
+}
+
+<input id="currentUserIsAdmin" type="hidden" value="@isAdmin" />
+
+<ul id="contextMenu" class="dropdown-menu" role="menu">	
+	@if(isAdmin) {
+		<li><a onclick="questionaireTree.addTreeNode($('#SelectedNodeId').val());" tabindex="-1" href="#">ხის დამატება</a></li>
+		<li><a onclick="questionaireTree.changeTreeNode($('#SelectedNodeId').val())" tabindex="-1" href="#">ხის შეცვლა</a></li>
+		@*<li><a onclick="questionaireTree.moveNodeUp($('#SelectedNodeId').val())" tabindex="-1" href="#">ზევით</a></li>
+		<li><a onclick="questionaireTree.moveNodeDown($('#SelectedNodeId').val())" tabindex="-1" href="#">ქვევით</a></li>*@
+		
+		<li><a onclick="questionaireTree.moveInPreActive($('#SelectedNodeId').val())" tabindex="-1" href="#">პრეაქტივში გადაყვანა</a></li>
+		 
+		<li><a onclick="questionaireTree.copyTreeNode($('#SelectedNodeId').val())" tabindex="-1" href="#">კოპირება</a></li>
+		<li><a onclick="questionaireTree.moveTreeNode($('#SelectedNodeId').val())" tabindex="-1" href="#">გადატანა</a></li>
+		<li><a onclick="questionaireTree.removeTreeNode($('#SelectedNodeId').val())" tabindex="-1" href="#">წაშლა</a></li>
+	}
+	<li><a onclick="questionaireTree.addNodeToFavourite($('#SelectedNodeId').val())" tabindex="-1" href="#">საკუთარში დამატება</a></li>
+</ul>
+
+<ul id="contextMenuOnlyMove" class="dropdown-menu" role="menu">
+	<li><a onclick="questionaireTree.moveTreeNode($('#SelectedNodeId').val())" tabindex="-1" href="#">გადატანა</a></li>
+</ul>
+
+<ul id="contextMenuOnlyAdd" class="dropdown-menu" role="menu">
+	<li><a onclick="questionaireTree.addTreeNode($('#SelectedNodeId').val());" tabindex="-1" href="#">ხის დამატება</a></li>
+</ul>

@@ -1,0 +1,43 @@
+﻿@using DiffPlex.DiffBuilder.Model
+@model DiffPaneModelParser
+
+@{
+	Layout = null;
+}
+
+<div class="panel-body">
+
+	@foreach(var line in Model.Lines) {
+		<div class="line-container">
+			<div class="line-number">@Html.Raw(line.Position.HasValue ? line.Position.ToString() : "&nbsp;")</div>
+			<div class="line line-@line.Type.ToString().ToLower()">
+				<span class="line-text" style="display:block; overflow-x: hidden; word-wrap: break-word; overflow-y: auto; max-height: 250px;">
+					@if(!string.IsNullOrEmpty(line.Text)) {
+						string spaceValue = "\u00B7";
+						string tabValue = "\u00B7\u00B7";
+
+						if(line.Type == ChangeType.Deleted || line.Type == ChangeType.Inserted || line.Type == ChangeType.Unchanged) {
+							@Html.Raw(line.Text.Replace(" ", spaceValue).Replace("\t", tabValue))
+						} else if(line.Type == ChangeType.Modified) {
+							foreach(var word in line.SubPieces) {
+								if(word.Type == ChangeType.Imaginary) { } else {
+									<span class="word-@word.Type.ToString().ToLower()">
+										@Html.Raw(word.Text.Replace(" ", spaceValue.ToString()))
+									</span>
+								}
+							}
+						}
+					} else {
+							
+					}
+				</span>
+			</div>
+		</div>
+	}
+
+	@*<div><span>1</span><span>xxxx</span></div>
+		<div><span>2</span><span>xxxx</span></div>
+		<div><span>3</span><span>xxxx</span></div>
+		<div><span>4</span><span>xxxx</span></div>
+		<div><span>5</span><span>xxxx</span></div>*@
+</div>

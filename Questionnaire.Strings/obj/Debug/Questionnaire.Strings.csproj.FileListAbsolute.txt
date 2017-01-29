@@ -1,0 +1,46 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings-ka-GE.resources
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings.resources
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csproj.GenerateResource.Cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings-ka-GE.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csproj.GenerateResource.Cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings-ka-GE.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csproj.GenerateResource.Cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings-ka-GE.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csproj.GenerateResource.Cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings-ka-GE.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csproj.GenerateResource.Cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\bin\Debug\Questionnaire.Strings.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings-ka-GE.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.Strings.resources
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.csproj.GenerateResource.Cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Strings\obj\Debug\Questionnaire.Strings.pdb

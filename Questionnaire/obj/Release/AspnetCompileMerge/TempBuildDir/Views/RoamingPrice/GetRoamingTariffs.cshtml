@@ -1,0 +1,205 @@
+﻿@model TariffViewModel
+
+@{
+	Layout = null;
+}
+
+@Html.HiddenFor(x => x.OperatorId)
+@Html.HiddenFor(x => x.EmailSubject)
+
+@Html.Raw(Model.HtmlContent)
+ 
+@*<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">ძირითადი ინფორმაცია</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-2">ვალუტა</div>
+			<div class="col-lg-10">@Model.TariffCurrency</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">დარიცხვის წესი</div>
+			<div class="col-lg-10">@Model.ChargingRule</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">კომენტარი</div>
+			<div class="col-lg-10">@Model.Comments</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">არაპიკის საათი</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-2">არაპიკის საათის პერიოდი</div>
+			<div class="col-lg-10">@Model.PeakOffTime</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">ზარის განხორციელება</div>
+			<div class="col-lg-10">@Model.CallSetup</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">საქართველოში დარეკვა</div>
+			<div class="col-lg-10">@Model.MocGeorgia</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">ოპერატორის შიგნით დარეკვა</div>
+			<div class="col-lg-10">@Model.MocOperator</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">ქვეყნის სხვა ნომრებზე დარეკვა</div>
+			<div class="col-lg-10">@Model.MocLocal</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">შემომავალი ზარი</div>
+			<div class="col-lg-10">@Model.Mtc</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">SMS</div>
+			<div class="col-lg-10">@Model.MocSms</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">MMS</div>
+			<div class="col-lg-10">@Model.MocMms</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">GPRS</div>
+			<div class="col-lg-10">@Model.MosGprs</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">პიკის საათი</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-2">არაპიკის საათის პერიოდი</div>
+			<div class="col-lg-10">@Model.PeakTime</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">ზარის განხორციელება</div>
+			<div class="col-lg-10">@Model.CallSetupPeak</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">საქართველოში დარეკვა</div>
+			<div class="col-lg-10">@Model.MosGeorgiaPeak</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">ოპერატორის შიგნით დარეკვა</div>
+			<div class="col-lg-10">@Model.MocOperatorPeak</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">ქვეყნის სხვა ნომრებზე დარეკვა</div>
+			<div class="col-lg-10">@Model.MocLocalPeak</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">შემომავალი ზარი</div>
+			<div class="col-lg-10">@Model.MtcPeak</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">SMS</div>
+			<div class="col-lg-10">@Model.MosSmsPeak</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">MMS</div>
+			<div class="col-lg-10">@Model.MocMmsPeak</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">GPRS</div>
+			<div class="col-lg-10">@Model.MosGprsPeak</div>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">ლაილაის როუმინგი</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-2">ვალუტა</div>
+			<div class="col-lg-10">@Model.TariffCurrencyL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">საქართველოში დარეკვა</div>
+			<div class="col-lg-10">@Model.MocGeorgiaL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">ოპერატორის/ქვეყნის შიგნით დარეკვა</div>
+			<div class="col-lg-10">@Model.MocLocalL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">სხვა ქვეყნებში დარეკვა</div>
+			<div class="col-lg-10">@Model.MocOperatorL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">შემომავალი ზარი</div>
+			<div class="col-lg-10">@Model.MtcL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">SMS გაგზავნა</div>
+			<div class="col-lg-10">@Model.MocSmsL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">MMS გაგზავნა</div>
+			<div class="col-lg-10">@Model.MocMmsL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">GPRS გაგზავნა</div>
+			<div class="col-lg-10">@Model.MosGprsL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">დარიცხვის წესი</div>
+			<div class="col-lg-10">@Model.ChargingRuleL</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-2">კომენტარი</div>
+			<div class="col-lg-10">@Model.CommentsL</div>
+		</div>
+	</div>
+</div>*@

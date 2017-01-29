@@ -1,0 +1,21 @@
+﻿@model DifferenceFinderModel
+
+@{
+	Layout = null;
+}
+
+<div class="row">
+	<div class="panel panel-default col-lg-6 nopadding">
+		<div class="panel-heading">
+			<h3 class="panel-title">Old Text</h3>
+		</div>
+		@{ Html.RenderAction("DiffPanel", "Diff", new { model = Model.OldText }); }
+	</div>
+
+	<div class="panel panel-default col-lg-6 nopadding">
+		<div class="panel-heading">
+			<h3 class="panel-title">New Text</h3>
+		</div>
+		@{ Html.RenderAction("DiffPanel", "Diff", new { model = Model.NewText }); }
+	</div>
+</div>

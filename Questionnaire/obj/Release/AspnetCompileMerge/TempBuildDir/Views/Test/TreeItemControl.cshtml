@@ -1,0 +1,24 @@
+﻿@model QuestionnaireTreeViewModel
+
+@{
+	Layout = null;
+}
+
+<li class="child-0">
+	<div class="icon-container">
+		@if(Model.Nodes != null && Model.Nodes.Count > 0) {
+			@*<i class="expand-icon glyphicon glyphicon-plus"></i>*@
+			<i class="expand-icon glyphicon glyphicon-minus"></i>
+		}
+	</div>
+	<span class="item-caption">@Model.Text</span>
+</li>
+@if(Model.Nodes != null && Model.Nodes.Count > 0) {
+	//foreach(var item in Model.Nodes) {
+	//	Html.RenderAction("TreeItemControl", "Test", new { item = item });
+	//}
+
+	foreach(var item in Model.Nodes) {
+		Html.RenderAction("TreeItemControl", "Test", new { item = item });
+	}
+}

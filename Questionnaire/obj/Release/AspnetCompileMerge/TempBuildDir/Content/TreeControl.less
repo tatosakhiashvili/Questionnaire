@@ -1,0 +1,71 @@
+﻿@rootWidth: 400px;
+
+.tree-root {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	width: @rootWidth;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	li {
+		padding: 6px 15px;
+		border-bottom: 1px solid #ddd;
+		.treeChild3(20, @rootWidth);
+
+		.icon-container {
+			width: 14px;
+			height: 14px;
+			vertical-align: top;
+			margin-top: 2px;
+			margin-right: 2px;
+			display: inline-block;
+			cursor: pointer;
+
+			.expand-icon {
+			}
+
+			.collapse-icon {
+			}
+		}
+
+		.item-caption {
+			vertical-align: top;
+			display: inline-block;
+		}
+
+		&:hover {
+			background-color: #F5F5F5;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+
+
+.treeChild3(@columns, @rootW) when (0 =< @columns) {
+	.treeChild3(@columns - 1, @rootW);
+
+	&.child-@{columns} {
+		@padder: 50px;
+		padding-left: @columns*20px + 20px;
+
+
+		.item-caption {
+			width: @rootW - (@columns*20px + 20px + @padder);
+		}
+	}
+}
+
+
+.treeChild(@columns) when (0 =< @columns) {
+	.treeChild(@columns - 1);
+
+	&.child-@{columns} {
+		padding-left: @columns*20px + 20px;
+	}
+}

@@ -1,0 +1,78 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.exe.config
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.exe
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.csprojResolveAssemblyReference.cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.exe
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Unity.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Repositories.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Domain.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Unity.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.xml
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Repositories.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Domain.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Services.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Services.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.exe.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.exe
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Services.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Unity.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Services.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Unity.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.exe
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.exe.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.exe
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Daemon.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Services.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Unity.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Services.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Unity.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.exe
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Daemon\obj\Debug\Questionnaire.Daemon.pdb

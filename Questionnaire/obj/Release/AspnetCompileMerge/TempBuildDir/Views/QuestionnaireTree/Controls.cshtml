@@ -1,0 +1,94 @@
+﻿
+@{
+	Layout = null;
+}
+
+<div class="row pre-active-container">
+	@if(QuestionnaireContext.Current.IsInRole("admin")) {
+		if(QuestionnaireContext.Current.PreActiveIsChecked) {
+			<label class="checkbox-inline">
+				<input type="checkbox" value="" checked="checked" id="only-published-tree-items">პრე-აქთივი
+			</label>
+		} else {
+			<label class="checkbox-inline">
+				<input type="checkbox" id="only-published-tree-items">პრე-აქთივი
+			</label>
+		}
+	}
+	<label class="checkbox-inline"><input type="checkbox" value="" id="history-datepicker-checker"><span>ისტორია</span></label>
+</div>
+
+<div class="clearfix"></div>
+<div class="space-max"></div>
+
+<input type="hidden" id="storedLocalEpoch" />
+
+<div class="datepicker-container">
+	<div class='input-group date' id="datetimepicker">
+		<input type='text' class="form-control include-time" />
+		<span class="input-group-addon">
+			<span class="glyphicon glyphicon-calendar"></span>
+		</span>
+	</div>
+	<div class="datepicker-fader"></div>
+</div>
+
+<div class="clearfix"></div>
+<div class="space-max"></div>
+
+<div class="row nopadding">
+	<div class="col-lg-12 nopadding">
+		<a onclick="questionaireTree.expand();" class="btn btn-primary left"><span class="glyphicon glyphicon-menu-down"></span></a>
+		<a onclick="questionaireTree.collapse();" class="btn btn-primary left btn-menu-up"><span class="glyphicon glyphicon-menu-up"></span></a>
+
+		<button id="btn-next" onclick="questionaireTree.selectBackOrNextTreeItem(false, $('#SelectedNodeId').val());" class="btn btn-primary disabled right"><span class="glyphicon glyphicon-menu-right"></span></button>
+		<button id="btn-back" onclick="questionaireTree.selectBackOrNextTreeItem(true, $('#SelectedNodeId').val());" class="btn btn-primary disabled right btn-menu-left"><span class="glyphicon glyphicon-menu-left"></span></button>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="space-max"></div>
+
+<div class="row nopadding">
+	<div class="col-lg-12 nopadding">
+		<label class="checkbox-inline"><input type="checkbox" value="" id="tree-search-checker">ძებნა</label>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<div class="space-max"></div>
+
+<div class="row tree-search-container nopadding">
+	<div class="col-lg-12 nopadding">
+		<input id="txt-tree-searcher" type="text" class="form-control" style="width:35%; display:inline-block;" />
+
+		<select id="slc-tree-search-type" class="form-control" style="width:35%; display:inline-block; margin-left:3px;">
+			<option value="1">მხოლოდ ხეში</option>
+			<option value="2">მხოლოდ პასუხში</option>
+			<option value="3">ხე + პასუხი</option>
+		</select>
+
+		<button id="btn-tree-extended-searcher" style="margin-left:3px;" onclick="questionaireTree.searchInTreeExtended();" class="btn btn-primary right"><span class="glyphicon glyphicon-fullscreen"></span></button>
+		<button id="btn-tree-searcher" onclick="questionaireTree.searchInTree();" class="btn btn-primary right"><span class="glyphicon glyphicon-search"></span></button>
+	</div>
+
+	@*<div class="col-lg-4 nopadding">
+
+		</div>
+
+		<div class="col-lg-3 text-right">
+
+		</div>*@
+	<div class="tree-search-fader"></div>
+</div>
+
+<div class="row multiple-operations-container">
+	<div class="col-lg-6 nopadding">
+		<label class="checkbox-inline" style="margin-top:7px;"><input type="checkbox" value="" id="tree-multi-selector-mode"><span>ჯგუფური ოპერაციები</span></label>
+	</div>
+
+	<div class="col-lg-6 nopadding">
+		<button id="btn-group-delete" onclick="questionaireTree.groupOperationDelete();" title="წაშლა" class="btn btn-primary disabled right"><span class="glyphicon glyphicon-remove"></span></button>
+		<button id="btn-group-preactive" onclick="questionaireTree.groupOperationMoveToPreactive();" title="პრე-აქთივში გადატანა" class="btn btn-primary disabled right btn-menu-left"><span class="glyphicon glyphicon-new-window"></span></button>
+	</div>
+</div>

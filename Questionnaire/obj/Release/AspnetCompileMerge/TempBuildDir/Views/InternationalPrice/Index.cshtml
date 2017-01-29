@@ -1,0 +1,102 @@
+﻿@model InternationalPriceViewModel
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">ქვეყნები</div>
+			<div class="col-lg-2 text-right">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+
+		<div class="row">
+			<form id="international-price-form" class="col-lg-12">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" style="width:100%; text-align:left;" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+								<span class="dropdown-custom-text">აირჩიეთ კომპანია</span>
+								<span class="caret" style="float:right; margin-top:8px;"></span>
+							</button>
+							<input type="hidden" id="CompanyId" name="CompanyId" required data-v-m="კომპანიის არჩევა სავალდებულოა" />
+							<ul class="dropdown-menu dropdown-custom" aria-labelledby="dropdownMenu1">
+								<li><a><div>Company</div><div>Code</div></a></li>
+								@foreach(var company in Model.Companies) {
+									<li onclick="$('.dropdown-custom-text').html('@company.Name'); $('#CompanyId').val('@company.Code');"><a><div>@company.Name</div><div>@company.Code</div></a></li>
+								}
+							</ul>
+						</div>
+
+					</div>
+					<div class="col-lg-3">
+						<button id="btn-next" onclick="questionaireTree.getInternationalPrice($('#international-price-form'))" class="btn btn-primary">Get Price</button>
+					</div>
+					<div class="col-lg-5">
+
+					</div>
+				</div>
+
+				<br />
+
+				@Html.HiddenFor(x => x.CountryId, new { required = "required", data_v_m = "ქვეყნის არჩევა სავალდებულოა" })
+
+				<div class="table-container">
+					<table class="selectable" id="international-price-table"></table>
+				</div>
+
+			</form>
+		</div>
+
+	</div>
+</div>
+
+<div id="intarnational-tariff-panel" class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">ტარიფები</div>
+			<div class="col-lg-2 text-right">
+				<button id="btn-next" onclick="questionaireTree.sendInternationalPriceNotification();" class="btn btn-primary">SMS-ის გაგზავნა</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row" id="international-tariff-container">
+
+		</div>
+	</div>
+</div>
+
+@section scripts{
+	<script>
+		$(function () {
+			$('#menu-international-price').addClass('active');
+
+			var internationalPriceRowTemplate = '<tr data-country-id="${Code}"><td>${Code}</td><td>${NameGeo}</td><td>${NameEng}</td></tr>';
+			var internationalPriceHeaderTemplate = '<tr><th>Country Code</th><th>Country Name Geo</th><th>Country Name Eng</th></tr>';
+			var internationalPriceDataSource = JSON.parse('@Html.ParseToJson(Model.Countries)');
+			var resultPerPage = 15;
+
+			$('#international-price-table').createTable({
+				dataSource: internationalPriceDataSource,
+				template: internationalPriceRowTemplate,
+				headerTemplate: internationalPriceHeaderTemplate,
+				resultPerPage: resultPerPage,
+				onRowClick: function (e) {
+					if (!$(e).hasClass('active')) {
+						$('#CountryId').val($(e).data('country-id'));
+					} else {
+						$('#CountryId').val('');
+					}
+				}
+			});
+
+			function getInternationalPriceSuccess(response) {
+				//alert('SSSSSSSSS');
+			}
+		});
+	</script>
+}

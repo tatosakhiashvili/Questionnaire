@@ -1,0 +1,134 @@
+﻿@model CompareEmailAnswersModel
+
+@{
+	Layout = null;
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-exlg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">შედარება</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+
+					<div class="col-lg-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">@Model.OldTemplateCaption  - @Model.OldTemplateUsername</h3>
+							</div>
+							@{ Html.RenderAction("DiffPanel", "Diff", new { model = Model.Difference.OldText }); }
+						</div>
+					</div>
+
+					<div class="col-lg-6">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">@Model.NewTemplateCaption - @Model.NewTemplateUsername</h3>
+							</div>
+							@{ Html.RenderAction("DiffPanel", "Diff", new { model = Model.Difference.NewText }); }
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+
+						@if(Model.OldFiles.Count > 0) {
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">მიმაგრებული ფაილები</h3>
+							</div>
+
+							<div class="panel-files" style="height: 148px; overflow-y: auto;">
+								<table id="email-answer-files-table" class="table table-hover selectable">
+									<thead><tr></tr></thead>
+
+									<tbody>
+
+										@foreach(var file in Model.OldFiles) {
+										<tr>
+											<td>
+												<a href="#" data-node-id="@Model.TreeId" data-folder-name="@file.FolderName" data-file-name="@file.FileName" onclick="uploadControl.initializeEmailComparisonDownload(this)">@file.FileName</a>
+											</td>
+										</tr>
+											}
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+						}
+
+					</div>
+
+					<div class="col-lg-6">
+						@if(Model.NewFiles.Count > 0) {
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">მიმაგრებული ფაილები</h3>
+							</div>
+
+							<div class="panel-files" style="height: 148px; overflow-y: auto;">
+								<table id="email-answer-files-table" class="table table-hover selectable">
+									<thead><tr></tr></thead>
+
+									<tbody>
+
+										@foreach(var file in Model.NewFiles) {
+										<tr>
+											<td>
+												<a href="#" data-node-id="@Model.TreeId" data-folder-name="@file.FolderName" data-file-name="@file.FileName" onclick="uploadControl.initializeEmailComparisonDownload(this)">@file.FileName</a>
+											</td>
+										</tr>
+											}
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+						}
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-6">
+						@if(!string.IsNullOrEmpty(Model.OldTemplateComment)) {
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">კომენტარი</h3>
+								</div>
+								<div style="padding:12px; font-size:12px;">
+									@Model.OldTemplateComment
+								</div>
+							</div>
+						}
+					</div>
+					<div class="col-lg-6">
+						@if(!string.IsNullOrEmpty(Model.NewTemplateComment)) {
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">კომენტარი</h3>
+								</div>
+								<div style="padding:12px; font-size:12px;">
+									@Model.NewTemplateComment
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-lg-12">
+						<button type="button" class="btn btn-primary" onclick="questionaireTree.compareAnswersList($('#SelectedNodeId').val())">უკან</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">დახურვა</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,153 @@
+﻿
+<div class="resizable-container">
+
+	<div class="left-panel">
+		<div class="questionary-tree-container-root">
+			<div id="questionary-tree-container">
+				@{ Html.RenderAction("Index", "QuestionnaireTree"); }
+			</div>
+
+			<div id="questionary-tree-controls">
+				@{ Html.RenderAction("Controls", "QuestionnaireTree"); }
+			</div>
+		</div>
+
+	</div>
+
+	<div class="resizable-splitter"></div>
+
+	<div class="right-panel">
+
+		<div class="home-main-container-panel">
+			<div class="home-main-container">
+
+				<div class="panel-container-vertical">
+
+					<div class="panel-top">
+						<div class="home-main-tab-container">
+							<div id="sms-tab-conainer" class="tab-control-panel left">
+								<div class="alert alert-info" style="margin:125px;">
+									ჩანაწერი ვერ მოიძებნა
+								</div>
+							</div>
+
+							<div id="top-tab-conainer" class="tab-control-panel right">
+								<div id="top-tab-container-fader" class="fader"></div>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="fixed-controls-container">
+						<div class="sms-send-controls"></div>
+						<div class="top-items-controls"></div>
+					</div>
+
+					<div class="splitter-horizontal">
+					</div>
+
+					<div class="panel-bottom">
+						<div class="panel-home-email-answer-container">
+							@{ Html.RenderAction("EmailAnswerControl", "QuestionnaireTree"); }
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+@{ Html.RenderAction("ContextMenu", "QuestionnaireTree", new { }); }
+
+@section scripts{
+
+	@*<script src="https://rawgit.com/RickStrahl/jquery-resizable/master/src/jquery-resizable.js"></script>*@
+	<script src="~/Scripts/framework/resizable/jquery-resizable.js"></script>
+	<script>
+
+		$(function () {
+
+			var panelHeight = 0;
+
+			setInterval(function () {
+
+				var topPanel = $('.panel-top.resizable');
+
+				if (topPanel.height() < 45) {
+					if ($('.fixed-controls-container').is(':visible')) {
+						$('.fixed-controls-container').fadeOut(150);
+					}
+				} else {
+					if (!$('.fixed-controls-container').is(':visible')) {
+						$('.fixed-controls-container').fadeIn(150);
+					}
+				}
+
+				var _panelHeight = $(".panel-bottom").height();
+				if (panelHeight != _panelHeight) {
+					panelHeight = _panelHeight;
+					$(".panel-bottom").height(panelHeight);
+				}
+			}, 100);
+
+			$(".left-panel").resizable({
+				handleSelector: ".resizable-splitter",
+				resizeHeight: false
+			});
+
+			$(".panel-top").resizable({
+				handleSelector: ".splitter-horizontal",
+				resizeWidth: false
+			});
+		});
+
+		var currentText = '';
+
+		$(function () {
+			$('#txtSearch').keyup(function () {
+				if ($(this).val() != '' && $(this).val().trim() == '') { return; }
+
+				var $selector = '#anwer-container';
+				$($selector).children().each(function () {
+					$(this).unhighlight(currentText);
+				}); $($selector).unhighlight(currentText);
+
+				currentText = $(this).val();
+				setTimeout(function () {
+					$($selector).children().each(function () {
+						$(this).highlight(currentText);
+					}); $($selector).highlight(currentText);
+				}, 50);
+			});
+
+			$('#menu-questionaire').addClass('active');
+
+			$("#sms-tab-conainer").on('click', '#sms-tabs li a', function () {
+				$(this).tab('show');
+			});
+
+			$("#top-tab-conainer").on('click', '#top-items-tabs li a', function () {
+				$(this).tab('show');
+				questionnaire.maintainTabControl($(this));
+
+				var tabName = $(this).attr('id');
+				if (tabName != "tab-itam-top-favourite-action") {
+					questionaireTree.loadUserFavouriteList(tabName);
+				}
+
+				if (tabName != "tab-itam-top-favourite-action") {
+					$('#btn-favourite-list-refresh').show();
+				} else {
+					$('#btn-favourite-list-refresh').hide();
+				}
+			});
+		});
+
+		$(function () {
+			questionaireTree.get('@QuestionnaireContext.Current.PreActiveIsChecked', '1900-01-01', true, function () { });
+			topS.getTopItems();
+		});
+	</script>
+}

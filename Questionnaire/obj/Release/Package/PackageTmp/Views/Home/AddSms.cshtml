@@ -1,0 +1,91 @@
+﻿@model AddSmsModel
+
+@{
+	Layout = null;
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">SMS პასუხების დამატება / შეცვლა</h4>
+			</div>
+
+			<form id="addSmsForm">
+				@Html.HiddenFor(x => x.TreeId, new { required = "required", data_v_m = "ხის შერჩევა სავალდებულოა" })
+				<div class="modal-body">
+					<div class="row">
+						@*<div class="col-lg-6">
+									<div class="form-group">
+											<label>-დან</label>
+											<input type="text" class="form-control" required="" data-v-m="თარიღი სავალდებულოა">
+									</div>
+							</div>*@
+
+						<div class="col-lg-12">
+							@if(Model.Groups != null && Model.Groups.Count == 0) {
+								<div class="form-group">
+									<label>ჯგუფი</label>
+									@Html.TextBoxFor(x => x.GroupName, new { @class = "form-control", required = "required", data_v_m = "ჯგუფის სახელი სავალდებულოა" })
+									@Html.HiddenFor(x => x.GroupId)
+								</div>
+							} else {
+								<label>ჯგუფი</label>
+								<div class="input-group">
+									@Html.TextBoxFor(x => x.GroupName, new { @class = "form-control", onkeydown = "$('#GroupId').val('')", required = "required", data_v_m = "ჯგუფის სახელი სავალდებულოა" })
+									@Html.HiddenFor(x => x.GroupId)
+									@Html.HiddenFor(x => x.GroupPreviousName)
+									<div class="input-group-btn">
+										<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+										<ul class="dropdown-menu dropdown-menu-right">
+											@foreach(var group in Model.Groups) {
+												<li><a href="#" data-group-id="@group.Id" data-sort-order="@group.SortOrder" data-group-name="@group.Name" data-comment="@group.Comment" data-raw-sms="@group.RawSms" onclick="questionaireTree.chooseDropDownGroup(this);">@group.Name</a></li>		}
+										</ul>
+									</div>
+								</div>
+								<br />
+							}
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label>სორტირების ნომერი</label>
+								@Html.TextBoxFor(x => x.GroupSortOrder, new { @class = "form-control", required = "required", data_v_m = "სორტირების ნომრის მითითება სავალდებულოა" })								
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">SMS ტექსტები</div>
+								<div class="panel-body">
+									@Html.TextAreaFor(x => x.SmsRawContent, new { @class = "form-control", rows = 5, data_v_m = "SMS ტექსტი სავალდებულოა" })
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="panel panel-default">
+								<div class="panel-heading">კომენტარი</div>
+								<div class="panel-body">
+									@Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = 5 })
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" onclick="questionaireTree.addSmsToTree($('#addSmsForm'));">დიახ</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">არა</button>
+			</div>
+		</div>
+	</div>
+</div>

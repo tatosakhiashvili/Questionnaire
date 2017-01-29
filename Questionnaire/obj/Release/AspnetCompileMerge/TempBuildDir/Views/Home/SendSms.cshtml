@@ -1,0 +1,28 @@
+﻿@{
+	Layout = null;
+}
+
+<div class="modal fade" id="sendSmsModal" role="dialog">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">მიუთითეთ ნომერი</h4>
+			</div>
+			<form id="sms-sender-form" class="modal-body">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label>ტელეფონის ნომერი</label>
+							<input type="text" class="form-control" id="smsNumber" required data-v-m="ნომრის მითითება სავალდებულოა" />
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="modal-footer">
+				<button type="button" onclick="questionaireTree.sendSmsToNumber($('#sms-sender-form'))" class="btn btn-primary">გაგზავნა</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">დახურვა</button>
+			</div>
+		</div>
+	</div>
+</div>

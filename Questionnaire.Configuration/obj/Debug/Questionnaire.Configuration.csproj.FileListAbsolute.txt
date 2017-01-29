@@ -1,0 +1,27 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Configuration\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Configuration\obj\Debug\Questionnaire.Configuration.pdb

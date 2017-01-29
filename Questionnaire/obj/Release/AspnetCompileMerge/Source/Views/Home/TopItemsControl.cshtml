@@ -1,0 +1,44 @@
+﻿@{
+	Layout = null;
+}
+
+<div class="top-tab-content">
+	<div>
+		<ul id="top-items-tabs" class="nav nav-tabs">
+			<li class="active"><a id="tab-itam-top-favourite-action" href="#tab-itam-top-favourite">საკუთარი</a></li>
+			<li><a id="tab-item-top-10-action" href="#tab-itam-top-10">ბოლო 10</a></li>
+			<li><a id="tab-item-month-10-action" href="#tab-item-month-10">თვის TOP 10</a></li>
+			<li><a id="tab-item-today-10-action" href="#tab-item-today-10">დღევანდელი TOP 10</a></li>
+			<li><a id="tab-item-abonent-faq-action" href="#tab-item-abonent-faq">აბონენტის კითხვები</a></li>
+		</ul>
+
+		<div class="tab-content" style="height:250px;">
+			<div id="tab-itam-top-favourite" class="tab-pane fade active in">
+				@{ Html.RenderAction("FavouriteFaq", "Faq", new { });}
+			</div>
+			<div id="tab-itam-top-10" class="tab-pane fade">
+				@*@{ Html.RenderAction("TopFaq", "Faq", new { topType = TopFaqEnumeration.TopTen });}*@
+			</div>
+			<div id="tab-item-month-10" class="tab-pane fade">
+				@*@{ Html.RenderAction("TopFaq", "Faq", new { topType = TopFaqEnumeration.MonthTopTen });}*@
+			</div>
+			<div id="tab-item-today-10" class="tab-pane fade">
+				@*@{ Html.RenderAction("TopFaq", "Faq", new { topType = TopFaqEnumeration.TodayTopTen });}*@
+			</div>
+			<div id="tab-item-abonent-faq" class="tab-pane fade">
+				@*@{ Html.RenderAction("CustomerFaq", "Faq", new { msisdn = "557003001" });}*@
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="top-tab-controls">
+	<div class="row nopadding">		
+		<ul class="pagination customized-pagination tab-control-pagination"></ul>
+		<button id="btn-favourite-list-refresh" onclick="questionaireTree.refreshUserFavouriteList();" class="btn btn-primary right">განახლება</button>
+	</div>	
+</div>
+
+<script>
+	questionnaire.maintainTabControl($('#tab-itam-top-favourite-action'));
+</script>

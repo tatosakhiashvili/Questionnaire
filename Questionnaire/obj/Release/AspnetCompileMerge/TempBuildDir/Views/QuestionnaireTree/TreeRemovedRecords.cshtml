@@ -1,0 +1,98 @@
+﻿@model DeletedTreeItemsViewModel
+
+<div id="panel-container">
+
+	<div id="left-panel">
+
+	</div>
+
+	<div class="splitter">
+	</div>
+
+	<div id="right-panel">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-lg-10">ხის წაშლილი ჩანაწერები</div>
+				</div>
+			</div>
+
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-lg-12">
+						<input type="hidden" id="hidSelectedDeletedItemId" />
+						<div class="table-container">
+							<table id="deleted-tree-items-table"></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ul id="reqover-deleted-tree-contextMenu" class="dropdown-menu" role="menu">
+			<li><a onclick="questionaireTree.recoverDeletedTreeItem($('#hidSelectedDeletedItemId').val());" tabindex="-1" href="#">აღდგენა</a></li>
+		</ul>
+	</div>
+
+</div>
+
+<style>
+	#panel-container {
+		
+	}
+
+	.splitter {
+	
+	}
+
+	#left-panel {
+
+	}
+
+	#right-panel {
+		
+	}
+</style>
+
+@section scripts{
+
+	
+
+	<script>
+		$(function () {
+
+			
+
+
+			$('#menu-tree-removed-items').addClass('active');
+
+			var deletedTreeItemsRowTemplate = '<tr data-tree-id="${Id}"><td>${Caption}</td><td>${FromDate}</td><td>${ToDate}</td><td>${Username}</td><td>${Comments}</td><td>${IsNew}</td><td>${DeleteType}</td></tr>';
+			var deletedTreeItemsHeaderTemplate = '<tr><th>Caption</th><th>FD</th><th>TD</th><th>User</th><th>Comments</th><th>Is News</th><th>Delete Type</th></tr>';
+			var resultPerPage = 15;
+
+			var deletedTreeItemsSource = JSON.parse('@Html.ParseToJson(Model.Records)');
+
+			$('#deleted-tree-items-table').createTable({
+				dataSource: deletedTreeItemsSource,
+				template: deletedTreeItemsRowTemplate,
+				headerTemplate: deletedTreeItemsHeaderTemplate,
+				resultPerPage: resultPerPage
+			});
+
+			$('#deleted-tree-items-table').on('contextmenu', 'tbody tr', function (e) {
+				var $contextMenu = $("#reqover-deleted-tree-contextMenu");
+				var selectedRowId = $(this).data('tree-id');
+
+				$('#hidSelectedDeletedItemId').val(selectedRowId);
+
+				$contextMenu.css({
+					display: "block",
+					left: (e.pageX),
+					top: (e.pageY)
+				});
+				return false;
+			});
+
+		})
+	</script>
+}

@@ -1,0 +1,68 @@
+﻿@model EmailAnswerControlViewModel
+
+@{
+	Layout = null;
+}
+
+<div class="home-main-answer-container">
+	<div class="panel panel-default home-main-panel-container">
+		<div class="panel-heading">პასუხი</div>
+
+		<div id="anwer-container" class="panel-body">
+
+		</div>
+	</div>
+
+	<div class="answer-controls">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="form-group">
+					<label>ძებნა</label>
+					<input type="text" class="form-control" id="txtSearch">
+				</div>
+			</div>
+			<form id="email-sender-form" class="col-lg-3">
+				@Html.HiddenFor(x => x.EmailBody, new { required = "required", data_v_m = "ელ. ფოსტის მითითება სავალდებულოა" })
+				<div class="form-group">
+					<label>ელ. ფოსტა</label>
+					<div class="input-group">
+						@Html.TextBoxFor(x => x.Email, new { @class = "form-control", required = "required", data_v_m = "გთხოვთ მიუთითეთ ელ. ფოსტა" })
+						<div class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+							<ul class="dropdown-menu dropdown-menu-right">
+								@foreach(var email in Model.Emails) {
+									<li><a data-email="@email" onclick="questionaireTree.chooseEmailDropDownGroup(this)" href="#">@email</a></li>
+								}
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</form>
+
+			<div class="col-lg-6">
+				<div class="form-group">
+					<button id="btn-email-sender" title="გაგზავნა" disabled onclick="questionaireTree.sendEmailNotification($('#email-sender-form'))" class="btn btn-primary email-answer-control">
+						@*<span class="glyphicon glyphicon-envelope"></span>*@
+						<span class="glyphicon glyphicon-send"></span>
+					</button>
+					<button id="btn-email-viewer" title="პასუხის ნახვა" disabled onclick="questionaireTree.viewEmailAnswer($('#SelectedNodeId').val())" class="btn btn-primary email-answer-control">
+						<span class="glyphicon glyphicon-eye-open"></span>
+					</button>
+					@if(QuestionnaireContext.Current.IsInRole("admin")) {
+						<button id="btn-add-email-answer" title="პასუხის დამატება / შეცვლა" disabled onclick="questionaireTree.addEmailAnswer($('#SelectedNodeId').val())" class="btn btn-primary email-answer-control">							
+							<span class="glyphicon glyphicon-edit"></span>
+						</button>
+					}
+					<button id="btn-compare-email-answers" title="შედარება" disabled onclick="questionaireTree.compareAnswersList($('#SelectedNodeId').val())" class="btn btn-primary email-answer-control">
+						<span class="glyphicon glyphicon-transfer"></span>
+					</button>
+				</div>
+			</div>
+
+			@*<div class="col-lg-1">
+
+				</div>*@
+		</div>
+	</div>
+</div>

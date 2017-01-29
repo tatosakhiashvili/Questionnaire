@@ -1,0 +1,26 @@
+﻿@model TopFaqModel
+
+@{
+    Layout = null;
+    var resultPerpage = 5;
+    var faqCount = Model.Faqs.Count();
+    var pageCount = faqCount % resultPerpage == 0 ? faqCount / resultPerpage : faqCount / resultPerpage + 1;
+}
+
+<input type="hidden" class="page-count" value="@pageCount" />
+<input type="hidden" class="current-page" value="1" />
+
+<table class="table table-hover">
+    @for (int i = 1; i <= pageCount; i++)
+    {
+        var itemsOnThisPage = Model.Faqs.Skip((i - 1) * resultPerpage).Take(resultPerpage);
+        <tbody id="@string.Format("top-list-body-{0}-{1}", Model.TopType, i)" class="@string.Format("top-list-body-{0}-Selector", Model.TopType)" style="display:@(i != 1 ? "none" : "")">
+            @foreach (var faq in itemsOnThisPage)
+            {
+                <tr>
+                    <th scope="row"><a onclick="questionaireTree.selectNode('@faq.Id')" href="#">@faq.Name</a></th>
+                </tr>
+            }
+        </tbody>
+    }
+</table>

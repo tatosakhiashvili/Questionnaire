@@ -1,0 +1,107 @@
+﻿@model ProductViewModel
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">საწყობი</div>
+			@*<div class="col-lg-2 text-right">
+					<button id="btn-filter-table" type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-filter"></span></button>
+				</div>*@
+		</div>
+	</div>
+
+	<div class="panel-body">
+
+		<div class="row">
+			<div class="col-lg-7">
+
+				<div class="table-container">
+					<table id="products-table" class="selectable"></table>
+				</div>
+
+			</div>
+
+			<div class="col-lg-5">
+				<div class="product-details-view"></div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+@section scripts{
+	<script>
+		$(function () {
+			$('#menu-store').addClass('active');
+
+			var productsRowTemplate = '<tr data-product-id="${Id}"><td>${Id}</td><td>${Name}</td></tr>';
+			var productsHeaderTemplate = '<tr><th>#</th><th>სახელი</th></tr>';
+
+			var productsSource = JSON.parse('@Html.ParseToJson(Model.Products)');
+			var resultPerPage = 20;
+
+			$('#products-table').createTable({
+				dataSource: productsSource,
+				resultPerPage: resultPerPage,
+				template: productsRowTemplate,
+				headerTemplate: productsHeaderTemplate,
+				onRowClick: function (e) {
+					var productId = $(e).data('product-id');
+					questionaireTree.getProductDetails(productId);
+				}
+			});
+
+		});
+	</script>
+}
+
+
+@*<div class="panel panel-default">
+		<div class="panel-heading">
+			საწყობი
+		</div>
+		<div class="panel-body modal-panel-email-answers-compare-list">
+			@if(true) {
+				<table class="table table-hover">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>დასახელება</th>
+						</tr>
+					</thead>
+					<tbody>
+						@for(int i = 0; i < 5; i++) {
+							<tr class="favourite-remove">
+								<td scope="row"><a href="#">@i</a></td>
+								<td scope="row"><a href="#">@i</a></td>
+							</tr>
+						}
+					</tbody>
+				</table>
+			} else {
+				<div class="alert alert-info text-center">
+					ჩანაწერი არ არსებობს
+				</div>
+			}
+		</div>
+	</div>*@
+
+
+
+
+
+
+
+
+
+@*<table class="table table-hover favourite-list-body">
+		@for(int i = 1; i <= 5; i++) {
+			var itemsOnThisPage = Model.Faqs.Skip((i - 1) * resultPerpage).Take(resultPerpage);
+			<tbody id="@string.Format("top-list-body-favourite-{0}", i)" class="@string.Format("top-list-body-favourite-Selector", i)" style="display:@(i != 1 ? "none" : "")">
+				@foreach(var faq in itemsOnThisPage) {
+					<tr class="favourite-remove" data-node-id="@faq.Id" data-record-id="@faq.RecordId">
+						<th scope="row"><a onclick="questionaireTree.selectNode('@faq.Id')" href="#">@faq.Name</a></th>
+					</tr>
+				}
+			</tbody>
+		}
+	</table>*@

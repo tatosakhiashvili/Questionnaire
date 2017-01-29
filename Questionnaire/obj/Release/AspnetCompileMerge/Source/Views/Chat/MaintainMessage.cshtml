@@ -1,0 +1,132 @@
+﻿@model MaintainMessageViewModel
+
+@{
+	Layout = null;
+	var modalClass = "modal-dialog modal-";
+
+	if(Model.ModifyStatus == MessageModifyStatus.Add || Model.ModifyStatus == MessageModifyStatus.Change) {
+		modalClass += "md";
+	}
+
+	var popupTitle = "შეტყობინების დამატება / შეცვლა";
+	if(Model.ModifyStatus == MessageModifyStatus.Delete) {
+		popupTitle = "შეტყობინების წაშლა";
+		modalClass += "sm";
+	}
+
+	if(Model.ModifyStatus == MessageModifyStatus.Execute) {
+		popupTitle = "შეტყობინების შესრულება";
+		modalClass += "sm";
+	}
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="@modalClass" role="document">
+		<form id="add-tree-item-form" class="modal-content">
+			@Html.HiddenFor(x => x.ModifyStatus)
+			@Html.HiddenFor(x => x.Id)
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">@popupTitle</h4>
+			</div>
+
+			<div class="modal-body">
+				@if(Model.ModifyStatus == MessageModifyStatus.Add || Model.ModifyStatus == MessageModifyStatus.Change) {
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label>ტექსტი</label>
+								@if(Model.ModifyStatus == MessageModifyStatus.Change) {
+									@Html.HiddenFor(x => x.Text)
+									@Html.TextBoxFor(x => x.Text, new { @class = "form-control", required = "required", disabled = "", data_v_m = "ტექსტი სავალდებულოა" })
+								} else {
+									@Html.TextBoxFor(x => x.Text, new { @class = "form-control", required = "required", data_v_m = "ტექსტი სავალდებულოა" })
+								}
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label>ტიპი</label>
+								@if(Model.ModifyStatus == MessageModifyStatus.Change) {
+									@Html.HiddenFor(x => x.Type)
+									@Html.DropDownListFor(m => m.Type, new SelectList(Model.Types, "Id", "Name", Model.Type), new { @class = "form-control", required = "required", disabled = "", data_v_m = "ტიპის არჩევა სავალდებულოა" })
+								} else {
+									@Html.DropDownListFor(m => m.Type, new SelectList(Model.Types, "Id", "Name", Model.Type), new { @class = "form-control", required = "required", data_v_m = "ტიპის არჩევა სავალდებულოა" })
+								}
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label>პრიორიტეტი</label>
+								@if(Model.ModifyStatus == MessageModifyStatus.Add) {
+									@Html.HiddenFor(x => x.Priority)
+									@Html.DropDownListFor(m => m.Priority, new SelectList(Model.Priorities, "Id", "Name", Model.Priority), new { @class = "form-control", disabled = "", required = "required", data_v_m = "პრიორიტეტის არჩევა სავალდებულოა" })
+								} else {
+									@Html.DropDownListFor(m => m.Priority, new SelectList(Model.Priorities, "Id", "Name", Model.Priority), new { @class = "form-control", required = "required", data_v_m = "პრიორიტეტის არჩევა სავალდებულოა" })
+								}
+							</div>
+						</div>
+
+						<div class="col-lg-4">
+							<div class="form-group">
+								<label>დამუშავების თარიღი</label>
+								<div class="datepicker-container">
+									<div class='input-group date datepicker'>
+										<input type='text' value="@(Model.ProcessDateEpoch.HasValue ? Model.ProcessDateEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" required data-v-m="დამუშავების თარიღი სავალდებულოა" class="form-control" />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+									<input id="ProcessDateEpoch" name="ProcessDateEpoch" type="hidden" value="@Model.ProcessDateEpoch" />
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label>კომენტარი</label>
+							@if(Model.ModifyStatus == MessageModifyStatus.Change) {
+								@Html.HiddenFor(x => x.Comment)
+								@Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = 5, disabled = "" })
+							} else {
+								if(Model.ModifyStatus == MessageModifyStatus.Add) {
+									@Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = 5 })
+								} else {
+									@Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = 3, required = "", data_v_m = "გთხოვთ მიუთითოთ კომენტარი" })
+								}
+							}
+						</div>
+					</div>
+				</div>
+
+
+				@if(Model.ModifyStatus == MessageModifyStatus.Add || Model.ModifyStatus == MessageModifyStatus.Change) {
+					<div class="row">
+						<div class="col-lg-12">
+							@{Html.RenderAction("MessageFiles", "Chat", new { messageId = Model.Id, showControls = true, showSearchBox = false });}
+						</div>
+					</div>
+								}
+
+			</div>
+
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-lg-2"></div>
+					<div class="col-lg-10">
+						<button type="button" onclick="chat.maintainMessage($('#add-tree-item-form'));" class="btn btn-primary">დიახ</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">არა</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

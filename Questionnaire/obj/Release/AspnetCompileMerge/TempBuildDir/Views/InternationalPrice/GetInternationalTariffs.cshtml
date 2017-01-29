@@ -1,0 +1,29 @@
+﻿@model InternationalTariffsViewModel
+
+@{
+	Layout = null;
+}
+
+<div class="table-container">
+	<input type="hidden" id="send-notification-text" />
+	<table id="international-tariff-table" class="selectable"></table>
+</div>
+
+<script>
+	$(function () {
+		var internationalPriceDataSource = JSON.parse('@Html.ParseToJson(Model.Records)');
+		var internationalPriceRowTemplate = '<tr data-sms-notification="${SmsText}"><td>${ZonIndName}</td><td>${Ind}</td><td>${PriceRound}</td><td>${Units}</td><td>${PriceC}</td></tr>';
+		var internationalPriceHeaderTemplate = '<tr><th>მიმართულება</th><th>ინდექსი</th><th>ფასი, ლარი</th><th>დამრგვალება</th><th>დამრგვალების ერთეული</th></tr>';
+		var resultPerPage = 15;
+
+		$('#international-tariff-table').createTable({
+			dataSource: internationalPriceDataSource,
+			template: internationalPriceRowTemplate,
+			headerTemplate: internationalPriceHeaderTemplate,
+			resultPerPage: resultPerPage,
+			onRowClick: function (e) {
+				$('#send-notification-text').val($(e).data('sms-notification'));
+			}
+		});
+	})
+</script>

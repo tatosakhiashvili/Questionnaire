@@ -1,0 +1,62 @@
+﻿@model GetEmailAnswerListView
+
+@{
+	Layout = null;
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">შედარება</h4>
+			</div>
+			<div class="modal-body">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						ვერსიები
+					</div>
+					<div class="panel-body modal-panel-email-answers-compare-list">
+						@if(Model.Answers.Count > 0) {
+							<form id="email-answer-list-comparer-form">
+								@for(int i = 0; i < Model.Answers.Count; i++) {
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="form-group none-margin">
+												<label>
+													@Html.HiddenFor(x => Model.Answers[i].Id)
+													@Html.HiddenFor(x => Model.Answers[i].Name)
+													@Html.HiddenFor(x => Model.Answers[i].Filename)
+													@Html.HiddenFor(x => Model.Answers[i].FromDate)
+													@Html.HiddenFor(x => Model.Answers[i].FromDateEpoch)
+													@Html.HiddenFor(x => Model.Answers[i].Username)
+													@Html.HiddenFor(x => Model.Answers[i].Comment)
+													@Html.CheckBoxFor(x => Model.Answers[i].Checked, new { @class = "comparison-checker" })
+													<span class="comparison-checker-label">@Model.Answers[i].Name</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								}
+							</form>
+						} else {
+							<div class="alert alert-info text-center">
+								ისტორია არ არსებობს
+							</div>
+						}
+					</div>
+				</div>
+
+			</div>
+
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-lg-12">
+						<button type="button" @(Model.Answers.Count <= 1 ? "disabled" : "") onclick="questionaireTree.compareSelectedEmailAnswers($('#email-answer-list-comparer-form'),'@Model.TreeId')" class="btn btn-primary">შედარება</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">არა</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

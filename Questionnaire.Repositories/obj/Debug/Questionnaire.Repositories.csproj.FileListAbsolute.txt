@@ -1,0 +1,91 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll.config
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.xml
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll.config
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Questionnaire.Repositories.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\bin\Debug\Newtonsoft.Json.xml
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Repositories\obj\Debug\Questionnaire.Repositories.pdb

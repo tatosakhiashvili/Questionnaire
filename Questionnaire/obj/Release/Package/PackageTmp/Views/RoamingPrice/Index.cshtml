@@ -1,0 +1,110 @@
+﻿@model RoamingViewModel
+
+@{
+	var resultPerpage = 10;
+	var countriesCount = Model.Countries.Count();
+	var pageCount = countriesCount % resultPerpage == 0 ? countriesCount / resultPerpage : countriesCount / resultPerpage + 1;
+}
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">ქვეყნები</div>
+			<div class="col-lg-2 text-right">
+				@*@Html.TextBoxFor(x => x.GroupName, new { @class = "form-control", required = "required", data_v_m = "ჯგუფის სახელი სავალდებულოა" })*@
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="table-container">
+					<table id="countries-table" class="selectable"></table>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div id="operators-panel" class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">ოპერატორები</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div id="operators-container" class="col-lg-12">
+				<div class="table-container">
+					<table id="operators-table"></table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<form id="roaming-notification-form" class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row" style="margin-bottom:-15px;">
+			<div class="col-lg-8" style="margin-top:5px;">ინფორმაცია</div>
+			<div class="col-lg-4">
+				<div class="row">
+					<div class="col-lg-2"></div>
+					<div class="col-lg-7 text-right">
+						<div class="form-group">
+							<div class="input-group">
+								<input type="text" id="Email" name="Email" class="form-control" required data-v-m="გთხოვთ მიუთითოთ იმეილ მისამართი" />
+								<div class="input-group-btn">
+									<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></button>
+									<ul class="dropdown-menu dropdown-menu-right">
+										@*@for(int i = 0; i < 1; i++) {
+											<li><a data-email="" onclick="questionaireTree.chooseEmailInRoaming(this)" href="#">asdasd@@mass.com</a></li>
+										}*@
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 text-right">
+						<button id="btn-email-sender" onclick="questionaireTree.sendRoamingPriceNotification($('#roaming-notification-form'))" class="btn btn-primary">გაგზავნა</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="information-content" class="panel-body">
+
+	</div>
+</form>
+
+@section scripts{
+	<script>
+		$(function () {
+			$('#menu-roaming-price').addClass('active');
+
+			var countriesRowTemplate = '<tr data-country-id="${Id}"><td>${NameGeo}</td><td>${NameEng}</td><td>${Code}</td></tr>';
+			var countriesHeaderTemplate = '<tr><th>ქვეყნის სახელი ქართულად</th><th>ქვეყნის სახელი ინგლისურად</th><th>ქვეყნის კოდი</th></tr>';
+			var resultPerPage = 17;
+
+			var countriesSource = JSON.parse('@Html.ParseToJson(Model.Countries)');
+			$('#countries-table').createTable({
+				dataSource: countriesSource,
+				resultPerPage: resultPerPage,
+				template: countriesRowTemplate,
+				headerTemplate: countriesHeaderTemplate,
+				onRowClick: function (e) {
+					var countryId = $(e).data('country-id');
+					questionaireTree.getRoamingOperators(countryId);
+				}
+			});
+
+		});
+	</script>
+}

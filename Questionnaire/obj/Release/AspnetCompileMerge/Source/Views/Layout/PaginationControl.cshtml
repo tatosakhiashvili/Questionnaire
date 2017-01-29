@@ -1,0 +1,21 @@
+﻿@model PaginationControlModel
+
+@{
+    Layout = null;
+}
+
+<nav>
+    <ul class="pagination">
+        <li class="@(Model.PageNo == 1 ? "disabled" : "")"><a href="#" class="p-arrow p-previous" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="@(Model.PageNo == i ? "active" : "")"><a href="#">@i <span class="sr-only">(current)</span></a></li>
+            <li class="@(Model.PageNo == i ? "active" : "")"><a href="#">@i <span class="sr-only">(current)</span></a></li>
+            <li class="@(Model.PageNo == i ? "active" : "")"><a href="#">@i <span class="sr-only">(current)</span></a></li>
+            <li class="@(Model.PageNo == i ? "active" : "")"><a href="#">@i <span class="sr-only">(current)</span></a></li>
+        }
+
+        <li class="disabled"><a href="#" class="p-arrow p-next" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+</nav>

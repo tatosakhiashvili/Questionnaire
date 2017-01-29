@@ -1,0 +1,50 @@
+﻿@model FavouriteFaqModel
+
+@{
+	Layout = null;
+
+	var resultPerpage = 5;
+	var faqCount = Model.Faqs.Count();
+	var pageCount = faqCount % resultPerpage == 0 ? faqCount / resultPerpage : faqCount / resultPerpage + 1;
+}
+
+<input type="hidden" class="page-count" value="@pageCount" />
+<input type="hidden" class="current-page" value="1" />
+<input type="hidden" id="hidSelectedRowId" value="" />
+<input type="hidden" id="hidSelectedRecordId" value="" />
+
+<table class="table table-hover favourite-list-body">
+	@for(int i = 1; i <= pageCount; i++) {
+		var itemsOnThisPage = Model.Faqs.Skip((i - 1) * resultPerpage).Take(resultPerpage);
+		<tbody id="@string.Format("top-list-body-favourite-{0}", i)" class="@string.Format("top-list-body-favourite-Selector", i)" style="display:@(i != 1 ? "none" : "")">
+			@foreach(var faq in itemsOnThisPage) {
+				<tr class="favourite-remove" data-node-id="@faq.Id" data-record-id="@faq.RecordId">
+					<th scope="row"><a onclick="questionaireTree.selectNode('@faq.Id')" href="#">@faq.Name</a></th>
+				</tr>
+			}
+		</tbody>
+	}
+</table>
+
+<ul id="favourite-contextMenu" class="dropdown-menu" role="menu">
+	<li><a onclick="questionaireTree.removeFromFavourite($('#hidSelectedRecordId').val(), $('#hidSelectedRowId').val());" tabindex="-1" href="#">საკუთარიდან წაშლა</a></li>
+</ul>
+
+<script>
+	$('.favourite-list-body').on('contextmenu', '.favourite-remove', function (e) {
+		var $contextMenu = $("#favourite-contextMenu");
+		var $topContainer = $("#top-tab-conainer");
+		$('#hidSelectedRowId').val($(this).data('node-id'));
+		$('#hidSelectedRecordId').val($(this).data('record-id'));
+
+		var topOffSet = $topContainer.offset().top;
+		var leftOffSet = $topContainer.offset().left;
+
+		$contextMenu.css({
+			display: "block",
+			left: (e.pageX - leftOffSet),
+			top: (e.pageY - topOffSet)
+		});
+		return false;
+	});
+</script>

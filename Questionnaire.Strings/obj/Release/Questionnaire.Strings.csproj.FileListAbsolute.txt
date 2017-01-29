@@ -1,0 +1,8 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\bin\Release\Questionnaire.Strings.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\bin\Release\Questionnaire.Strings.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Release\Questionnaire.Strings.csprojResolveAssemblyReference.cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Release\Questionnaire.Strings.Strings-ka-GE.resources
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Release\Questionnaire.Strings.Strings.resources
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Release\Questionnaire.Strings.csproj.GenerateResource.Cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Release\Questionnaire.Strings.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Strings\obj\Release\Questionnaire.Strings.pdb

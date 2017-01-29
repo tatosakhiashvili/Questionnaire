@@ -1,0 +1,7 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Release\Questionnaire.Domain.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Release\Questionnaire.Domain.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Release\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Release\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\obj\Release\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\obj\Release\Questionnaire.Domain.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\obj\Release\Questionnaire.Domain.pdb

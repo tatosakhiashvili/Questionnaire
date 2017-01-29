@@ -1,0 +1,30 @@
+﻿@model OperatorsViewModel
+
+@{
+	Layout = null;
+}
+
+<div class="table-container">
+	<table id="operators-table" class="selectable"></table>
+</div>
+
+<script>
+	$(function () {
+		var operatorsRowTemplate = '<tr data-operator-id="${Id}"><td>${Name}</td><td>${NetworkCode}</td><td>${NetworkType}</td><td>${Display}</td><td>${CustomerCare}</td><td>${GprsRoamingStatus}</td></tr>';
+		var operatorsHeaderTemplate = '<tr><th>Operator</th><th>Network Code</th><th>Network Type</th><th>Display</th><th>CustomerCare</th><th>GPRS Roaming Status</th></tr>'
+		var resultPerPage = 10;
+
+		var operatorsSource = JSON.parse('@Html.ParseToJson(Model.Operators)');
+		$('#operators-table').createTable({
+			dataSource: operatorsSource,
+			resultPerPage: resultPerPage,
+			template: operatorsRowTemplate,
+			headerTemplate: operatorsHeaderTemplate,
+			onRowClick: function (e) {
+				var operator = $(e).data('operator-id');
+				questionaireTree.getRoamingTariffs(operator);
+			}
+		});
+
+	})
+</script>

@@ -1,0 +1,13 @@
+﻿@model QuestionnaireViewModel
+
+@{
+	Layout = null;
+}
+
+<link href="~/Content/RecursiveTree.css" rel="stylesheet" />
+
+<ul>
+	@foreach(var node in Model.TreeItems) {
+		Html.RenderAction("RecursiveTreeItem", "QuestionnaireTree", new { node = node });
+	}
+</ul>

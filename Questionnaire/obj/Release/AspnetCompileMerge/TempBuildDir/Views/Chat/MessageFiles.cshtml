@@ -1,0 +1,53 @@
+﻿@model MessageFileViewModel
+
+@{
+	Layout = null;
+
+	var tableId = "message-files-table-" + (Model.ShowControls ? "with-control" : "without");
+}
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-8" style="margin-top:@(Model.ShowControls ? "5px" : "")">ფაილები</div>
+			<div class="col-lg-4 text-right">
+				@if(Model.ShowControls) {
+					<a class="btn btn-default" onclick="chat.removeFiles('@Model.MessageId', '@tableId');"><span class="glyphicon glyphicon-minus"></span></a>
+					<a class="btn btn-default" onclick="chat.uploadFiles(this);"><span class="glyphicon glyphicon-plus"></span></a>
+					<input id="chatFileUploader" type="file" style="display:none;" />
+					<input id="chatFileUploaderTableName" type="hidden" value="@tableId" />
+				}
+			</div>
+		</div>
+	</div>
+	<div class="panel-body">
+		<table id="@tableId" class="table table-hover@(Model.ShowControls ? " selectable" : "")">
+			<thead></thead>
+			<tbody>
+				@for(int i = 0; i < Model.Files.Count; i++) {
+					<tr class="chat-file-downloader" data-message-id="@Model.MessageId">
+						<td>
+							@Html.HiddenFor(x => Model.Files[i].Id, new { @class = "reindex-item Id", data_start_name = "Files", data_end_name = "Id" })
+							@Html.HiddenFor(x => Model.Files[i].FileName, new { @class = "reindex-item FileName", data_start_name = "Files", data_end_name = "FileName" })
+							@Html.HiddenFor(x => Model.Files[i].FolderName, new { @class = "reindex-item FolderName", data_start_name = "Files", data_end_name = "FolderName" })
+							@Html.HiddenFor(x => Model.Files[i].IsTemporary, new { @class = "reindex-item IsTemporary", data_start_name = "Files", data_end_name = "IsTemporary" })
+							<span>@Model.Files[i].FileName</span>
+						</td>
+						<td>@Model.Files[i].Operator</td>
+					</tr>
+				}
+			</tbody>
+		</table>
+
+	</div>
+</div>
+
+@if(!Model.ShowControls) {
+	<script>
+		$(function () {
+			$('.chat-file-downloader').click(function () {
+				chat.initializeDownload($(this));
+			})
+		});
+	</script>
+}

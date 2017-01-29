@@ -1,0 +1,51 @@
+﻿@model CurrentCallMobileNumberViewModel
+
+@{
+	Layout = null;
+}
+
+<script>
+	$(function () {
+		$('body').on('keyup', '#msisdn-number', function () {
+			var mobileNo = $(this).val();
+			var _data = JSON.stringify({ mobileNumber: mobileNo });
+			$.ajax({
+				type: 'POST',
+				url: '/UpdateSessionMobile',
+				data: _data,
+				datatype: "json",
+				contentType: "application/json; charset=utf-8",
+				traditional: true,
+				processData: false,
+				success: function (response) { },
+				error: function (e) { }
+			});
+		});
+
+		var callIsInProgress = false;
+
+		setInterval(function () {
+			if (!callIsInProgress) {
+				callIsInProgress = true;
+
+				$.ajax({
+					type: 'GET',
+					url: '/GetCurrentCallMobileNumber',
+					data: null,
+					processData: false,
+					success: function (response) {
+						callIsInProgress = false;
+						if (response.success) {
+							if (response.data.ChangeMobileInput) {
+								$('#msisdn-number').val(response.data.MobileNumber);
+								questionnaire.showSuccessMessage('ხაზზეა ახალი მომხმარებელი');
+							}
+						}
+					},
+					error: function (e) { }
+				});
+			}
+
+		}, '@(Model.LoadIntervalSeconds * 1000)');
+	})
+</script>

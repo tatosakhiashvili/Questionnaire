@@ -1,0 +1,49 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire  1 2 3 4 5\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Geocell\Questionnaire\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - 4 4 4 5 5 5\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Domain\bin\Debug\Questionnaire.Domain.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Domain\bin\Debug\Questionnaire.Configuration.pdb
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.csprojResolveAssemblyReference.cache
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.dll
+C:\Users\besik.sakhiashvili\Desktop\XOS\Questionnaire - Do\Questionnaire.Domain\obj\Debug\Questionnaire.Domain.pdb

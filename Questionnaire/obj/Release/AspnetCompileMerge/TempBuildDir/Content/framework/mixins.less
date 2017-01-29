@@ -1,0 +1,13 @@
+﻿.table-system(@n, @i: 1) when (@i =< @n) {
+	table {
+		&.cl-@{i} {
+			tr {
+				td {
+					width: 100%/@i;
+				}
+			}
+		}
+	}
+
+	.table-system(@n, (@i + 1));
+}

@@ -1,0 +1,72 @@
+﻿@model ChatItemsViewModel
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-7"><span style="margin-top:6px; display:inline-block;">ჩატი</span></div>
+			<div class="col-lg-5 text-right">
+				<button id="btnAddMessage" type="button" onclick="chat.add();" class="btn btn-primary">დამატება</button>
+				<button id="btnRemoveMessage" type="button" onclick="chat.delete($('#hidSelectedChatId').val());" class="btn-chat-action btn btn-primary disabled">წაშლა</button>
+				<button id="btnAddExecuteMessage" type="button" onclick="chat.execute($('#hidSelectedChatId').val());" class="btn-chat-action btn btn-primary disabled">შესრულება</button>
+				<button id="btnAddChangeMessage" type="button" onclick="chat.change($('#hidSelectedChatId').val());" class="btn-chat-action btn btn-primary disabled">შეცვლა</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-12">
+				<input type="hidden" id="hidSelectedChatId" />
+				<div class="table-container">
+					<table id="chat-table" class="selectable"></table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="message-details-container">
+
+</div>
+
+@section scripts{
+	<script>
+		$(function () {
+			$('#menu-chat').addClass('active');
+
+			var chatItemsRowTemplate = '<tr data-notification-id=${Id} data-status-id=${StatusId}><td>${CreateDate}</td> <td>${Text}</td> <td>${ProcessDate}</td> <td>${Comment}</td> <td>${Owner}</td> <td>${Operator}</td> <td>${LastUpdateDate}</td> <td>${Status}</td> <td>${Priority}</td> </tr>';
+			var chatItemsHeaderTemplate = '<tr><th>შექმნის თარიღი</th> <th>ტექსტი</th> <th>დამუშავების თარიღი</th> <th>კომენტარი</th> <th>შემქმნელი</th> <th>ბოლო ცვლილება</th> <th>ბოლო ცვლილების თარიღი</th> <th>სტატუსი</th> <th>პრიორიტეტი</th> </tr>';
+			var resultPerPage = 10;
+
+			var chatItemsSource = JSON.parse('@Html.ParseToJson(Model.Records)');
+
+			$('#chat-table').createTable({
+				dataSource: chatItemsSource,
+				template: chatItemsRowTemplate,
+				headerTemplate: chatItemsHeaderTemplate,
+				resultPerPage: resultPerPage,
+				onRowClick: function (e) {
+					var messageId = $(e).data('notification-id');
+					if ($(e).hasClass('active')) {
+						$('#hidSelectedChatId').val('');
+						$('#message-details-container').html('');
+					} else {
+						$('#hidSelectedChatId').val(messageId);
+
+						httpAction.get('/Chat/GetMessageDetails/' + messageId, function (response) {
+							$('#message-details-container').html(response);
+						});
+					}
+
+					var status = $(e).data('status-id');
+
+					if ($('#hidSelectedChatId').val() == '' || status == '24' || status == '22') {
+						$('.btn-chat-action').addClass('disabled');
+					} else {
+						$('.btn-chat-action').removeClass('disabled');
+					}
+				}
+			});
+		})
+	</script>
+}

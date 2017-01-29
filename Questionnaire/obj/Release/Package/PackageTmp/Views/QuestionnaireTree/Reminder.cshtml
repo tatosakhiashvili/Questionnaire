@@ -1,0 +1,64 @@
+﻿@model ReminderItemsViewModel
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10">Reminder</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+
+		<div class="row">
+			<div class="col-lg-12">
+				<input type="hidden" id="hidSelectedReminderItemId" />
+				<div class="table-container">
+					<table id="reminder-items-table"></table>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<ul id="reminder-items-contextMenu" class="dropdown-menu" role="menu">
+	<li><a onclick="questionaireTree.changeTreeNode($('#hidSelectedReminderItemId').val());" tabindex="-1" href="#">შეცვლა</a></li>
+</ul>
+
+@section scripts{
+	<script>
+		$(function () {
+			$('#menu-reminder').addClass('active');
+
+			var reminderItemsRowTemplate = '<tr data-tree-id="${Id}"><td>${Caption}</td><td>${FromDate}</td><td>${ToDate}</td><td>${InDate}</td><td>${User}</td><td>${Comments}</td><td>${Remind}</td></tr>';
+			var reminderItemsHeaderTemplate = '<tr><th>Caption</th><th>FD</th><th>TD</th><th>In Date</th><th>User</th><th>Comments</th><th>Remind</th></tr>';
+			var resultPerPage = 15;
+
+			var reminderItemsSource = JSON.parse('@Html.ParseToJson(Model.Records)');
+
+			console.log(reminderItemsSource);
+
+			$('#reminder-items-table').createTable({
+				dataSource: reminderItemsSource,
+				template: reminderItemsRowTemplate,
+				headerTemplate: reminderItemsHeaderTemplate,
+				resultPerPage: resultPerPage
+			});
+
+			$('#reminder-items-table').on('contextmenu', 'tbody tr', function (e) {
+				var $contextMenu = $("#reminder-items-contextMenu");
+				var selectedRowId = $(this).data('tree-id');
+
+				$('#hidSelectedReminderItemId').val(selectedRowId);
+
+				$contextMenu.css({
+					display: "block",
+					left: (e.pageX),
+					top: (e.pageY)
+				});
+				return false;
+			});
+
+		})
+	</script>
+}

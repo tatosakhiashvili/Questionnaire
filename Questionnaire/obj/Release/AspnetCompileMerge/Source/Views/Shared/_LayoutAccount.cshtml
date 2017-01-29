@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title</title>
+	@Styles.Render("~/Content/css")
+</head>
+<body>
+	<div class="alert alert-danger fade in general-error-container">
+		<a class="close">&times;</a>
+		<strong class="error-title"></strong>
+		<ul class="error-container">
+			<li><span class="error-content">123</span></li>
+		</ul>
+	</div>
+
+	@RenderBody()
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/custom/accountScripts")
+	@Scripts.Render("~/bundles/bootstrap")
+	<script src="~/Scripts/main/questionnaire.js"></script>
+
+	@RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,127 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire", "Questionnaire\Questionnaire.csproj", "{3741FFA9-6B65-491A-A41F-5BE00E40FF59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{EF63FDCF-BC62-4D67-B8D5-CB2D78285A64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Domain", "Questionnaire.Domain\Questionnaire.Domain.csproj", "{E24B3A12-6C4A-45BF-A12E-3017950D9979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Services", "Questionnaire.Services\Questionnaire.Services.csproj", "{FCF68582-29C9-4EBF-B65D-F2452D71BE2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Unity", "Questionnaire.Unity\Questionnaire.Unity.csproj", "{83A61A16-5821-4158-8E5C-38A08DAD0C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Configuration", "Questionnaire.Configuration\Questionnaire.Configuration.csproj", "{484EAC94-0EB5-4018-BD0C-4C491474D8E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Strings", "Questionnaire.Strings\Questionnaire.Strings.csproj", "{06D3E980-1243-46B0-ADA8-9BE9E38D10AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Repositories", "Questionnaire.Repositories\Questionnaire.Repositories.csproj", "{60D74567-9A80-417C-83CF-2E26FA581EBE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{B054F9ED-1644-4D23-A3AB-BDE6AC213570}"
+	ProjectSection(SolutionItems) = preProject
+		..\New folder (14)\KJL\New folder\Oracle.ManagedDataAccess.dll = ..\New folder (14)\KJL\New folder\Oracle.ManagedDataAccess.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Test.Repositories", "Questionnaire.Test\Questionnaire.Test.Repositories.csproj", "{7F28C821-2020-4441-B5C8-D90309FD7F4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Tests", "Unit Tests", "{D2295373-D024-4D52-B0E6-D59047529D58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Questionnaire.Daemon", "Questionnaire.Daemon\Questionnaire.Daemon.csproj", "{D5E60FFF-8CE0-4EE6-B763-1A7BFB254227}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3741FFA9-6B65-491A-A41F-5BE00E40FF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3741FFA9-6B65-491A-A41F-5BE00E40FF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3741FFA9-6B65-491A-A41F-5BE00E40FF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3741FFA9-6B65-491A-A41F-5BE00E40FF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E24B3A12-6C4A-45BF-A12E-3017950D9979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E24B3A12-6C4A-45BF-A12E-3017950D9979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E24B3A12-6C4A-45BF-A12E-3017950D9979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E24B3A12-6C4A-45BF-A12E-3017950D9979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCF68582-29C9-4EBF-B65D-F2452D71BE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCF68582-29C9-4EBF-B65D-F2452D71BE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCF68582-29C9-4EBF-B65D-F2452D71BE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCF68582-29C9-4EBF-B65D-F2452D71BE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A61A16-5821-4158-8E5C-38A08DAD0C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A61A16-5821-4158-8E5C-38A08DAD0C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A61A16-5821-4158-8E5C-38A08DAD0C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A61A16-5821-4158-8E5C-38A08DAD0C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{484EAC94-0EB5-4018-BD0C-4C491474D8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{484EAC94-0EB5-4018-BD0C-4C491474D8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{484EAC94-0EB5-4018-BD0C-4C491474D8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{484EAC94-0EB5-4018-BD0C-4C491474D8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D3E980-1243-46B0-ADA8-9BE9E38D10AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D3E980-1243-46B0-ADA8-9BE9E38D10AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D3E980-1243-46B0-ADA8-9BE9E38D10AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D3E980-1243-46B0-ADA8-9BE9E38D10AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60D74567-9A80-417C-83CF-2E26FA581EBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D74567-9A80-417C-83CF-2E26FA581EBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D74567-9A80-417C-83CF-2E26FA581EBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D74567-9A80-417C-83CF-2E26FA581EBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F28C821-2020-4441-B5C8-D90309FD7F4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F28C821-2020-4441-B5C8-D90309FD7F4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F28C821-2020-4441-B5C8-D90309FD7F4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F28C821-2020-4441-B5C8-D90309FD7F4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E60FFF-8CE0-4EE6-B763-1A7BFB254227}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E60FFF-8CE0-4EE6-B763-1A7BFB254227}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E60FFF-8CE0-4EE6-B763-1A7BFB254227}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E60FFF-8CE0-4EE6-B763-1A7BFB254227}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E24B3A12-6C4A-45BF-A12E-3017950D9979} = {EF63FDCF-BC62-4D67-B8D5-CB2D78285A64}
+		{FCF68582-29C9-4EBF-B65D-F2452D71BE2D} = {EF63FDCF-BC62-4D67-B8D5-CB2D78285A64}
+		{83A61A16-5821-4158-8E5C-38A08DAD0C92} = {EF63FDCF-BC62-4D67-B8D5-CB2D78285A64}
+		{484EAC94-0EB5-4018-BD0C-4C491474D8E6} = {EF63FDCF-BC62-4D67-B8D5-CB2D78285A64}
+		{06D3E980-1243-46B0-ADA8-9BE9E38D10AF} = {EF63FDCF-BC62-4D67-B8D5-CB2D78285A64}
+		{60D74567-9A80-417C-83CF-2E26FA581EBE} = {EF63FDCF-BC62-4D67-B8D5-CB2D78285A64}
+		{7F28C821-2020-4441-B5C8-D90309FD7F4A} = {D2295373-D024-4D52-B0E6-D59047529D58}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 10
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Questionnaire.Configuration\\Questionnaire.Configuration.csproj
+		SccProjectTopLevelParentUniqueName1 = Questionnaire.sln
+		SccProjectName1 = Questionnaire.Configuration
+		SccLocalPath1 = Questionnaire.Configuration
+		SccProjectUniqueName2 = Questionnaire.Domain\\Questionnaire.Domain.csproj
+		SccProjectTopLevelParentUniqueName2 = Questionnaire.sln
+		SccProjectName2 = Questionnaire.Domain
+		SccLocalPath2 = Questionnaire.Domain
+		SccProjectUniqueName3 = Questionnaire.Repositories\\Questionnaire.Repositories.csproj
+		SccProjectTopLevelParentUniqueName3 = Questionnaire.sln
+		SccProjectName3 = Questionnaire.Repositories
+		SccLocalPath3 = Questionnaire.Repositories
+		SccProjectUniqueName4 = Questionnaire.Services\\Questionnaire.Services.csproj
+		SccProjectTopLevelParentUniqueName4 = Questionnaire.sln
+		SccProjectName4 = Questionnaire.Services
+		SccLocalPath4 = Questionnaire.Services
+		SccProjectUniqueName5 = Questionnaire.Strings\\Questionnaire.Strings.csproj
+		SccProjectTopLevelParentUniqueName5 = Questionnaire.sln
+		SccProjectName5 = Questionnaire.Strings
+		SccLocalPath5 = Questionnaire.Strings
+		SccProjectUniqueName6 = Questionnaire.Unity\\Questionnaire.Unity.csproj
+		SccProjectTopLevelParentUniqueName6 = Questionnaire.sln
+		SccProjectName6 = Questionnaire.Unity
+		SccLocalPath6 = Questionnaire.Unity
+		SccProjectUniqueName7 = Questionnaire\\Questionnaire.csproj
+		SccProjectName7 = Questionnaire
+		SccLocalPath7 = Questionnaire
+		SccProjectUniqueName8 = Questionnaire.Test\\Questionnaire.Test.Repositories.csproj
+		SccProjectTopLevelParentUniqueName8 = Questionnaire.sln
+		SccProjectName8 = Questionnaire.Test
+		SccLocalPath8 = Questionnaire.Test
+		SccProjectUniqueName9 = Questionnaire.Daemon\\Questionnaire.Daemon.csproj
+		SccProjectName9 = Questionnaire.Daemon
+		SccLocalPath9 = Questionnaire.Daemon
+	EndGlobalSection
+EndGlobal

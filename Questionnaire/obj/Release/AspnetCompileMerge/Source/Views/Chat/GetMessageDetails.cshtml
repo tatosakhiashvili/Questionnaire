@@ -1,0 +1,45 @@
+﻿@model ChatItemDetailsViewModel
+
+@{
+	Layout = null;
+}
+
+<div class="col-lg-6 nopadding-left">
+	@{Html.RenderAction("MessageFiles", "Chat", new { messageId = Model.MessageId, showControls = false, showSearchBox = true });}
+</div>
+
+<div class="col-lg-6 nopadding-right">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<div class="row">
+				<div class="col-lg-10">სტატუსები</div>
+			</div>
+		</div>
+		<div class="panel-body">
+			<div class="table-container">
+				<table id="chat-status-table"></table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(function () {
+		MaintainChatStatusTable();
+	});
+
+	function MaintainChatStatusTable() {
+		var chatStatusRowTemplate = '<tr><td>${Name}</td> <td>${Date}</td> <td>${Operator}</td></tr>';
+		var chatStatusHeaderTemplate = '<tr><th>სტატუსი</th> <th>თარიღი</th> <th>ოპერატორი</th></tr>';
+		var resultPerPage = 5;
+
+		var chatStatusSource = JSON.parse('@Html.ParseToJson(Model.Statuses)');
+
+		$('#chat-status-table').createTable({
+			dataSource: chatStatusSource,
+			template: chatStatusRowTemplate,
+			headerTemplate: chatStatusHeaderTemplate,
+			resultPerPage: resultPerPage
+		});
+	}
+</script>

@@ -1,0 +1,106 @@
+﻿@model ExtendedSearchModel
+
+@{
+	Layout = null;
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">გაფართოვებული ძებნა</h4>
+			</div>
+			<form id="extended-search-form">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label>საძიებო ფრაზა</label>
+								@Html.TextBoxFor(x => x.SearchTerm, new { @class = "form-control"})
+							</div>
+						</div>
+					</div>
+
+					<div class="row">						
+						<div class="col-lg-1 extended-search-checkbox-container">							
+							@Html.CheckBoxFor(x => x.FromToIsActive, new { @class = "extended-search-from-to-fader-checkbox" })
+						</div>
+
+						<div class="col-lg-11 nopadding-right extended-search-from-to-container">
+							<div class="extended-search-from-to-fader"></div>
+							<div class="col-lg-6" style="margin-left:-15px;">
+								<div class="form-group">
+									<label>-დან</label>
+									<div class="datepicker-container">
+										<div class='input-group date datepicker'>
+
+											<input type='text' id="ToDate" value="@(Model.PeriodStartEpoch.HasValue ? Model.PeriodStartEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" required data-v-m="საწყისი თარიღი სავალდებულოა" class="form-control" />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+										<input type="hidden" id="PeriodStartEpoch" name="PeriodStartEpoch" value="@Model.PeriodStartEpoch" />
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 nopadding-right" style="margin-left:15px; padding-left:30px;">
+								<div class="form-group">
+									<label>-მდე</label>
+									<div class="datepicker-container">
+										<div class='input-group date datepicker'>
+											<input type='text' id="ToDate" value="@(Model.PeriodEndEpoch.HasValue ? Model.PeriodEndEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" required data-v-m="საბოლოო თარიღი სავალდებულოა" class="form-control" />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-calendar"></span>
+											</span>
+										</div>
+										<input type="hidden" id="PeriodEndEpoch" name="PeriodEndEpoch" value="@Model.PeriodEndEpoch" />
+									</div>
+								</div>
+							</div>
+						</div>					
+					</div>
+
+					<div class="row">
+						<div class="col-lg-1 extended-search-checkbox-container">							
+							@Html.CheckBoxFor(x => x.StatusIsActive, new { @class = "extended-search-status-fader-checkbox" })
+						</div>
+						<div class="col-lg-5 extended-search-dropdown-container">
+							<div class="extended-search-status-fader"></div>
+							<div class="form-group">
+								<label>სტატუსი</label>
+								@Html.DropDownListFor(x => x.StatusId, new SelectList(Model.Statuses, "Id", "Name", Model.StatusId), new { @class = "form-control", required = "required", data_v_m = "სტატუსის არჩევა სავალდებულოა" })
+							</div>
+						</div>
+
+						<div class="col-lg-1 extended-search-checkbox-container">
+							@Html.CheckBoxFor(x => x.OwnerIsActive, new { @class = "extended-search-owner-fader-checkbox" })
+						</div>
+						<div class="col-lg-5 extended-search-dropdown-container">
+							<div class="extended-search-owner-fader"></div>
+							<div class="form-group">
+								<label>მფლობელი</label>
+								@Html.DropDownListFor(x => x.OwnerId, new SelectList(Model.Owners, "Id", "Name", Model.OwnerId), new { @class = "form-control", required = "required", data_v_m = "მფლობელის არჩევა სავალდებულოა" })
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="form-group">
+								<label>კომენტარი</label>
+								@Html.TextBoxFor(x => x.SearchComment, new { @class = "form-control" })
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</form>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary" onclick="questionaireTree.extendedSearchForm($('#extended-search-form'));">ძებნა</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">გაუქმება</button>
+			</div>
+		</div>
+	</div>
+</div>

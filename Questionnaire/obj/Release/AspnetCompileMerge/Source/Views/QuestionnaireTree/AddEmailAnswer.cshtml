@@ -1,0 +1,287 @@
+﻿@model AddEmailAnswerModal
+
+@{
+	Layout = null;
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<form id="add-email-answer-form" class="modal-content">
+			@Html.HiddenFor(x => x.AnswerId, new { /*required = "required",*/ data_v_m = "დაფიქსირდა ტექნიკური შეცდომა, გთხოვთ სცადოთ მოგვიანებით" })
+			@Html.HiddenFor(x => x.NodeId, new { /*required = "required",*/ data_v_m = "დაფიქსირდა ტექნიკური შეცდომა, გთხოვთ სცადოთ მოგვიანებით" })
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">პასუხის დამატება / შეცვლა</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label>-დან</label>
+							<div class="datepicker-container">
+								<div class='input-group date datepicker'>
+									<input type='text' value="@(Model.FromDateEpoch.HasValue ? Model.FromDateEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" required data-v-m="საწყისი თარიღი სავალდებულოა" class="form-control" />
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+								<input id="FromDateEpoch" name="FromDateEpoch" type="hidden" value="@Model.FromDateEpoch" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label>-მდე</label>
+							<div class="datepicker-container">
+								<div class='input-group date datepicker'>
+									<input type='text' id="ToDate" value="@(Model.ToDateEpoch.HasValue ? Model.ToDateEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" required data-v-m="საბოლოო თარიღი სავალდებულოა" class="form-control" />
+									<span class="input-group-addon">
+										<span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+								<input type="hidden" id="ToDateEpoch" name="ToDateEpoch" value="@Model.ToDateEpoch" />
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label>შაბლონის სახელი</label>
+							@Html.TextBoxFor(x => x.TemplateName, new { @class = "form-control", data_required_if = "", data_required_if_control = "SaveAsTemplate", data_required_if_control_value = "true", data_v_m = "შაბლონის სახელი სავალდებულოა" })
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-default modal-panel-tree-attached-files">
+							<div class="panel-heading">შაბლონები</div>
+							<div class="panel-body templates-container">
+								<table class="table table-hover">
+									<tbody>
+										@foreach(var template in Model.Templates) {
+											<tr>
+												<th scope="row"><a onclick="questionaireTree.getEmailTemplate('@Model.NodeId', '@template.FileName')" href="#">@template.Name</a></th>
+											</tr>
+										}
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label>პასუხი</label>
+							@*@Html.TextAreaFor(x => x.Answer, new { @class = "form-control", data_required_textarea = "", data_v_m = "პასუხი სავალდებულოა", rows = "3" })*@
+							@Html.TextAreaFor(x => x.Answer, new { @class = "form-control", rows = "3" })
+							@Html.HiddenFor(x => x.PureAnswer)
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="form-group">
+							<label>საათი</label>
+							@Html.DropDownListFor(x => x.HourId, new SelectList(Model.Hours, "Id", "Name", Model.HourId), new { @class = "form-control" })
+						</div>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="form-group" style="margin-bottom:0;">
+							<label>მეილი</label>
+							<div class="button-group">
+								<button type="button" class="btn btn-default btn-sm dropdown-toggle form-control text-right" data-toggle="dropdown">
+									<span class="">აირჩიეთ მეილი</span>
+									<span class="caret"></span>
+								</button>
+
+								<ul class="dropdown-menu" style="right:15px; float:right;">
+									@for(int i = 0; i < Model.EmailList.Count; i++) {
+										var email = Model.EmailList[i];
+										@Html.HiddenFor(x => Model.EmailList[i].Id)
+										@Html.HiddenFor(x => Model.EmailList[i].Name)
+										<li>
+											<a href="#" class="small" data-value="@email.Id" tabIndex="-1">
+												@*<input type="checkbox" />*@
+												@Html.CheckBoxFor(x => Model.EmailList[i].IsChecked)
+												<span style="display: inline-block; vertical-align: top; margin-top: 2px; margin-left: 2px;">@email.Name</span>
+											</a>
+										</li>
+										@*@Html.HiddenFor(x => Model.EmailList[i].IsChecked)*@
+									}
+								</ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="form-group">
+							<label>კომენტარი</label>
+							@Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = "3" })
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="panel panel-default modal-panel-tree-attached-files">
+							<div class="panel-heading">
+								<div class="row">
+									<div class="col-lg-10" style="margin-top:5px;">მიმაგრებული ფაილები</div>
+									<div class="col-lg-2 text-right">
+										<a class="btn btn-default" onclick="questionaireTree.removeEmailAnswerFiles('@Model.NodeId')"><span class="glyphicon glyphicon-minus"></span></a>
+										<a class="btn btn-default" onclick="questionaireTree.uploadEmailAnswerFiles('@Model.NodeId', '@Model.AnswerId')"><span class="glyphicon glyphicon-plus"></span></a>
+									</div>
+								</div>
+							</div>
+							<div class="panel-body files-container" style="height:92px; overflow-y:auto;">
+								<input style="display:none;" type="file" class="file-uploader-ctrl" />
+
+								<table id="email-answer-files-table" class="table table-hover selectable">
+									<thead><tr></tr></thead>
+
+									<tbody>
+										@for(int i = 0; i < Model.Files.Count; i++) {
+											<tr>
+												<td>
+													@Html.HiddenFor(x => Model.Files[i].Id, new { @class = "reindex-item id", data_start_name = "Files", data_end_name = "Id" })
+													@Html.HiddenFor(x => Model.Files[i].Name, new { @class = "reindex-item name", data_start_name = "Files", data_end_name = "Name" })
+													@Html.HiddenFor(x => Model.Files[i].FolderName, new { @class = "reindex-item folderName", data_start_name = "Files", data_end_name = "FolderName" })
+													@Html.HiddenFor(x => Model.Files[i].Comment, new { @class = "reindex-item Comment", data_start_name = "Files", data_end_name = "Comment" })
+													@Html.HiddenFor(x => Model.Files[i].IsTemporary, new { @class = "reindex-item isTemporary", data_start_name = "Files", data_end_name = "IsTemporary" })
+													<a href="#" data-node-id="@Model.NodeId" data-folder-name="@Model.Files[i].FolderName" data-file-name="@Model.Files[i].Name" data-is-temporary="@Model.Files[i].IsTemporary" onclick="uploadControl.initializeDownload(this)">@Model.Files[i].Name</a>
+												</td>
+												<td>
+													<a href="#" data-node-id="@Model.NodeId" onclick="uploadControl.initializeTreeFileDownload(this)">@Model.Files[i].Comment</a>
+												</td>
+											</tr>
+										}
+									</tbody>
+
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-lg-2" style="margin-top: 3px;">
+						<select class="form-control" disabled>
+							<option value="1" selected>ქართული</option>
+							<option>English</option>
+						</select>
+					</div>
+					<div class="col-lg-3">
+						<div class="checkbox text-left">
+							<label>
+								@Html.CheckBoxFor(x => x.SaveAsTemplate)
+								შაბლონად დამახსოვრება
+							</label>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<button type="button" onclick="questionaireTree.addEmailAnswerToTree($('#add-email-answer-form'),'@Model.NodeId')" class="btn btn-primary">დიახ</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">არა</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	@*<form id="upload" enctype="multipart/form-data" action="@Url.Action("JsonSave", "Survey")" method="POST">
+			<input type="file" name="fileUpload" id="fileUpload" size="23" /><br />
+			<button>Upload!</button>
+		</form>*@
+
+	<script>
+		function initializeEditor() {
+
+			if (tinyMCE.editors.length > 0) {
+				tinyMCE.execCommand('mceFocus', true, "Answer");
+				tinyMCE.execCommand('mceRemoveEditor', true, "Answer");
+				tinyMCE.execCommand('mceAddEditor', true, "Answer");
+			}
+
+			tinyMCE.PluginManager.add('customem', function (editor, url) {
+				editor.addButton('customNodeAttacher', {
+					text: 'ხის ელემენტის ჩასმა',
+					icon: false,
+					onclick: function () {
+						var nodeId = $('#SelectedNodeId').val();
+						questionaireTree.showCustomTagsModal(nodeId, editor, function (response) { });
+					}
+				});
+			});
+
+			//tinyMCE.init({
+			//	selector: "#Answer",
+			//	menubar: false,
+			//	//plugins: ["code, link, customem"],
+			//	plugins: ["code, preview, contextmenu, image, link, searchreplace, customem"],
+			//	toolbar: "bold italic | code | link | customNodeAttacher",
+			//	//extended_valid_elements: "emstart,emend",
+			//	//custom_elements: "emstart,emend",
+
+			//	paste_data_images: true,
+			//	images_upload_handler: function (blobInfo, success, failure) {
+			//		success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+			//	},
+			//});
+
+			tinymce.init({
+				selector: "#Answer",
+				plugins: ["paste, code, preview, contextmenu, image, link, searchreplace, customem"],
+				menubar: false,
+				toolbar: "paste | bold italic | code | link | customNodeAttacher",
+				paste_data_images: true,
+				images_upload_handler: function (blobInfo, success, failure) {
+					success("data:" + blobInfo.blob().type + ";base64," + blobInfo.base64());
+				},
+				paste_retain_style_properties: "color font-size"
+			});
+
+		}
+
+		//initializeEditor();
+
+		function initializeCheckboxList() {
+
+			var options = [];
+
+			$('.dropdown-menu a').on('click', function (event) {
+
+				var $target = $(event.currentTarget),
+						val = $target.attr('data-value'),
+						$inp = $target.find('input'),
+						idx;
+
+				if ((idx = options.indexOf(val)) > -1) {
+					options.splice(idx, 1);
+					setTimeout(function () { $inp.prop('checked', false) }, 0);
+				} else {
+					options.push(val);
+					setTimeout(function () { $inp.prop('checked', true) }, 0);
+				}
+
+				$(event.target).blur();
+
+				console.log(options);
+				return false;
+			});
+		};
+
+		initializeCheckboxList();
+
+		questionnaire.initializeTinyMceEditor('#Answer');
+
+		questionnaire.initializeDatepicker($('#add-email-answer-form'));
+	</script>
+</div>

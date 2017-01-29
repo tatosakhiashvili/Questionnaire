@@ -1,0 +1,226 @@
+﻿@model MaintainTreeItemViewMode
+
+@{
+	Layout = null;
+}
+
+<div class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-exlg" role="document">
+		<form id="add-tree-item-form" class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">კითხვარის დამატება / შეცვლა</h4>
+			</div>
+			<div class="modal-body">
+
+				@if(Model.ModifyStatus == ModifyStatus.CopyTreeNode) {
+					@Html.HiddenFor(x => x.TreeToId, new { required = "required", data_v_m = "გთხოვთ მონიშნოთ ხე რომელშიც ანხორციელებთ კოპირებას" })
+				}
+
+				@if(Model.ModifyStatus == ModifyStatus.MoveTreeNode) {
+					@Html.HiddenFor(x => x.TreeToId, new { required = "required", data_v_m = "გთხოვთ მონიშნოთ ხე რომელშიც ანხორციელებთ გადატანას" })
+				}
+
+				@Html.HiddenFor(x => x.ModifyStatus)
+				<div class="row">
+					<div class="col-lg-5 tree-col">
+						<div class="@string.Format("panel panel-default modal-tree-control{0}", Model.LockTree ? " locked" : "")">
+							@if(Model.LockTree) { <div class="locked-fade"></div> }
+							<div class="panel-heading">მშობელი</div>
+							<div class="panel-body">
+								<div id="modalTree"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<div class="panel panel-default padding-container modal-tree-control-container">
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<label>წარწერა</label>
+										@Html.TextBoxFor(x => x.Text, new { @class = "form-control", required = "required", data_v_m = "წარწერა სავალდებულოა" })
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label>შექმნის თარიღი</label>
+										<div class="datepicker-container fader-root">
+											<div class="fader-content"></div>
+											<div class='input-group date datepicker'>
+												<input type='text' value="@(Model.CreateDateEpoch.HasValue ? Model.CreateDateEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" class="form-control" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div>
+											<input id="CreateDateEpoch" name="CreateDateEpoch" type="hidden" value="@Model.CreateDateEpoch" />
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label>-დან</label>
+										<div class="datepicker-container">
+											<div class='input-group date datepicker'>
+												<input type='text' value="@(Model.FromDateEpoch.HasValue ? Model.FromDateEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" required data-v-m="საწყისი თარიღი სავალდებულოა" class="form-control" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div>
+											<input id="FromDateEpoch" name="FromDateEpoch" type="hidden" value="@Model.FromDateEpoch" />
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label>-მდე</label>
+										<div class="datepicker-container">
+											<div class='input-group date datepicker'>
+												<input type='text' id="ToDate" value="@(Model.ToDateEpoch.HasValue ? Model.ToDateEpoch.Value.FromEpoch().ToString("dd/MM/yyyy") : "")" required data-v-m="საბოლოო თარიღი სავალდებულოა" class="form-control" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div>
+											<input type="hidden" id="ToDateEpoch" name="ToDateEpoch" value="@Model.ToDateEpoch" />
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-3">
+									<div class="form-group">
+										<label>სიახლის დღეები</label>
+										@Html.TextBoxFor(x => x.NewsDays, new { @class = "form-control manage-touch-spin", required = "required", data_v_m = "სიახლის დღეები სავალდებულოა" })
+									</div>
+								</div>
+
+								@*<div class="col-lg-3">
+									<div class="form-group">
+										<label>სტატუსი</label>
+										@Html.DropDownListFor(m => m.Status, new SelectList(Model.Statuses, "Id", "Name", Model.Status), new { @class = "form-control", required = "required", data_v_m = "სტატუსის არჩევა სავალდებულოა" })
+									</div>
+								</div>*@
+							</div>
+
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="panel panel-default modal-panel-tree-attached-files">
+										<div class="panel-heading">მიმაგრებული ფაილები</div>
+										<div class="panel-body files-container" style="height:106px; overflow-y:auto;">
+
+											<input style="display:none;" type="file" class="tree-file-uploader" />
+											<table id="tree-files-table" class="table table-hover selectable">
+												<thead></thead>
+												<tbody>
+													@for(int i = 0; i < Model.Files.Count; i++) {
+														<tr>
+															<td>
+																@Html.HiddenFor(x => Model.Files[i].Id, new { @class = "reindex-item Id", data_start_name = "Files", data_end_name = "Id" })
+																@Html.HiddenFor(x => Model.Files[i].FileName, new { @class = "reindex-item FileName", data_start_name = "Files", data_end_name = "FileName" })
+																@Html.HiddenFor(x => Model.Files[i].FolderName, new { @class = "reindex-item FolderName", data_start_name = "Files", data_end_name = "FolderName" })
+																@Html.HiddenFor(x => Model.Files[i].IsTemporary, new { @class = "reindex-item IsTemporary", data_start_name = "Files", data_end_name = "IsTemporary" })
+																@Html.HiddenFor(x => Model.Files[i].Comment, new { @class = "reindex-item Comment", data_start_name = "Files", data_end_name = "Comment" })
+																<a href="#" data-node-id="@Model.TreeId" onclick="uploadControl.initializeTreeFileDownload(this)">@Model.Files[i].FileName</a>
+															</td>
+															<td>
+																<a href="#" data-node-id="@Model.TreeId" onclick="uploadControl.initializeTreeFileDownload(this)">@Model.Files[i].Comment</a>
+															</td>
+														</tr>		
+													}
+												</tbody>
+											</table>
+
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-lg-2">
+									<button type="button" onclick="questionaireTree.uploadTreeFiles('@Model.TreeId');" class="btn btn-primary">დამატება</button>
+								</div>
+								<div class="col-lg-8"></div>
+								<div class="col-lg-2">
+									<button type="button" onclick="questionaireTree.removeTreeFiles('@Model.TreeId');" class="btn btn-primary">წაშლა</button>
+								</div>
+							</div>
+
+							<br />
+
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="form-group">
+										<label>კომენტარი</label>
+										@Html.TextAreaFor(x => x.Comment, new { @class = "form-control", rows = "3" })
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				@if(!string.IsNullOrEmpty(Model.PreviousChangeMadeEditor)) {
+					<div class="row">
+						<div class="col-lg-12 text-right">
+							ბოლო ცვლილება განახორციელა მომხმარებელმა: @Model.PreviousChangeMadeEditor
+						</div>
+					</div>
+				}
+				 
+			</div>
+
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-lg-2">
+						@if(Model.AllowCopyChildrens) {
+							<div class="checkbox">
+								<label>
+									@Html.CheckBoxFor(x => x.CopyChildrens)
+									შვილების კოპირებაც
+								</label>
+							</div>
+						}
+					</div>
+					<div class="col-lg-10">
+						<button type="button" onclick="questionaireTree.addNodeToTree($('#add-tree-item-form'),'@Model.TreeId')" class="btn btn-primary">დიახ</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">არა</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<script>
+	function InitializeModalTree() {
+		var data = '@Html.Raw(HttpUtility.JavaScriptStringEncode(Newtonsoft.Json.JsonConvert.SerializeObject(Model.TreeModel)))';
+		var _data = JSON.parse(data);
+
+		$modalTree = $('#modalTree');
+		$modalTree.treeview({ data: _data.treeItems });
+
+		//$modalTree.treeView();
+
+		$modalTree.on('nodeSelected', function (event, data) {
+			$('#TreeToId').val(data.data_node);
+		});
+
+		//TODO: Because of get tree items for copy ...
+		SelectModalTreeNode('@Model.SelectedNodeId', _data.expandedItems);
+	}
+
+	function SelectModalTreeNode(nodeId, expItems) {
+		var nodeIndex = -1;
+		for (var i = 0; i < expItems.length; i++) {
+			if (expItems[i].NodeId == nodeId) {
+				nodeIndex = expItems[i].Id; break;
+			}
+		}
+
+		$('#modalTree').treeview('revealNode', [nodeIndex, { silent: true }]);
+		$('#modalTree').treeview('selectNode', [nodeIndex, { silent: true }]);
+		$('#modal-tree-control').animate({ scrollTop: $('[data-nodeid="' + nodeIndex + '"]').position().top - 100 }, function () { });
+	}
+
+	InitializeModalTree();
+</script>

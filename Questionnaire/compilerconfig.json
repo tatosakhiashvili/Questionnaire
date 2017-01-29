@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/Site.css",
+    "inputFile": "Content/Site.less"
+  },
+  {
+    "outputFile": "Content/EditorLayout.css",
+    "inputFile": "Content/EditorLayout.less"
+  },
+  {
+    "outputFile": "Content/framework/tableSearch/tableSearch.css",
+    "inputFile": "Content/framework/tableSearch/tableSearch.less"
+  },
+  {
+    "outputFile": "Content/TreeControl.css",
+    "inputFile": "Content/TreeControl.less"
+  }
+]

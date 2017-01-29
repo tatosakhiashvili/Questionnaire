@@ -1,0 +1,13 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Questionnaire.Repositories.dll.config
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Questionnaire.Repositories.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Questionnaire.Repositories.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Newtonsoft.Json.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Oracle.ManagedDataAccess.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Questionnaire.Domain.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Questionnaire.Domain.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\bin\Release\Newtonsoft.Json.xml
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Release\Questionnaire.Repositories.csprojResolveAssemblyReference.cache
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Release\Questionnaire.Repositories.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Repositories\obj\Release\Questionnaire.Repositories.pdb

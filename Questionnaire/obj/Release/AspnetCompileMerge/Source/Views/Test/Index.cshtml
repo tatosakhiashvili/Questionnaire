@@ -1,0 +1,28 @@
+﻿@model List<QuestionnaireTreeViewModel>
+
+@{
+	Layout = null;
+}
+
+<link href="~/Content/TreeControl.css" rel="stylesheet" />
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<div>sssssss</div>
+
+<ul class="tree-root">
+
+	@foreach(var item in Model) {
+		Html.RenderAction("TreeItemControl", "Test", new { item = item });
+	}
+</ul>
+
+<br />
+<br />
+<br />
+<br />
+<br />

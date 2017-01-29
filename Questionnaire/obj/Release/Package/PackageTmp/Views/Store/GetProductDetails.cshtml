@@ -1,0 +1,34 @@
+﻿@model ProductDetailsViewModel
+
+@{
+	Layout = null;
+}
+
+@if(Model.ProductDetails.Count <= 0) {
+	<div class="alert alert-info" style="margin:125px;">
+		ჩანაწერი ვერ მოიძებნა
+	</div>
+} else {
+	<div class="table-container">
+		<table id="product-details-table" class="selectable"></table>
+	</div>
+}
+
+@if(Model.ProductDetails.Count > 0) {
+	<script>
+		$(function () {
+			var productDetailsRowTemplate = '<tr><td>${Name}</td><td>${Cnt}</td></tr>';
+			var productDetailsHeaderTemplate = '<tr><th>სახელი</th><th>Cnt</th></tr>';
+
+			var productDetailsSource = JSON.parse('@Html.ParseToJson(Model.ProductDetails)');
+			var resultPerPage = 20;
+
+			$('#product-details-table').createTable({
+				dataSource: productDetailsSource,
+				resultPerPage: resultPerPage,
+				template: productDetailsRowTemplate,
+				headerTemplate: productDetailsHeaderTemplate,
+			});
+		})
+	</script>
+}

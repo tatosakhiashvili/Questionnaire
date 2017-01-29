@@ -1,0 +1,5 @@
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\bin\Release\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\bin\Release\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\obj\Release\Questionnaire.Configuration.dll
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\obj\Release\Questionnaire.Configuration.pdb
+D:\TFS\Geocell\Questionnaire\Questionnaire.Configuration\obj\Release\Questionnaire.Configuration.csprojResolveAssemblyReference.cache

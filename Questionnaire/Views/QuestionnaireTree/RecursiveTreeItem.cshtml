@@ -1,0 +1,26 @@
+﻿@model QuestionnaireTreeViewModel
+
+@{
+	Layout = null;
+	if(Model.Id == 1) {
+		string sss = "";
+	}
+}
+
+@*<li class="tree-item child-@Model.HierarchyId">
+		<div class="icon-container">
+			@if(Model.Nodes != null && Model.Nodes.Count > 0) {
+				<i onclick="maintainOpenClose('@Model.Id')" class="expand-icon glyphicon glyphicon-minus"></i>
+				<i onclick="maintainOpenClose('@Model.Id')" class="collapse-icon glyphicon glyphicon-plus"></i>
+			}
+		</div>
+		<span class="item-caption">@Model.Text</span>
+	</li>*@
+<li>
+	@Model.Id
+</li>
+@if(Model.Nodes != null && Model.Nodes.Count > 0) {
+	foreach(var node in Model.Nodes) {
+		Html.RenderAction("RecursiveTreeItem", "QuestionnaireTree", new { node = node });
+	}
+}

@@ -1,0 +1,106 @@
+﻿
+@{
+	Layout = null;
+}
+
+<div class="brand-menu">
+	@*<a href="/">
+		<img class="brand-logo" src="~/Content/images/logo-ge.png" />
+	</a>*@
+
+	<div class="loggedin-container">
+		<label style="margin-right:5px;">@string.Format("მომხმარებელი: {0} {1}", QuestionnaireContext.Current.User.FirstName, QuestionnaireContext.Current.User.LastName)</label>
+
+		<a href="@Url.Action("LogOut", "Account")" class="btn btn-default btn-sm">
+			<span class="glyphicon glyphicon-log-out"></span> გასვლა
+		</a>
+	</div>
+
+	<div class="clearfix"></div>
+</div>
+
+<div class="redesigned-menu">
+	<ul>
+		<li id="menu-questionaire"><a href="@Url.Action("Index", "Home", new { })">კითხვარი</a></li>
+		@if(QuestionnaireContext.Current.IsInRole("admin")) {
+			<li id="menu-tree-removed-items"><a href="@Url.Action("TreeRemovedRecords", "QuestionnaireTree", new { })">კითხვარის წაშლილი ჩანაწერები</a></li>
+			<li id="menu-reminder"><a href="@Url.Action("Reminder", "QuestionnaireTree", new { })">შეხსენება</a></li>
+		}
+		<li id="menu-international-code"><a href="@Url.Action("Index", "InternationalCode", new { })">საერთაშორისო კოდები</a></li>
+		<li id="menu-international-price"><a href="@Url.Action("Index", "InternationalPrice", new { })">საერთაშორისო ტარიფები</a></li>
+		<li id="menu-roaming-price"><a href="@Url.Action("Index", "RoamingPrice", new { })">როუმინგის ტარიფები</a></li>
+		<li id="menu-store"><a href="@Url.Action("Index", "Store", new { })">საწყობი</a></li>
+		<li id="menu-chat"><a href="@Url.Action("Index", "Chat", new { })">ჩატი</a></li>
+	</ul>
+
+	@*<div class="collapse navbar-collapse" id="myNavbar" style="display:none;">
+		<ul class="nav navbar-nav"></ul>		
+	</div>*@
+</div>
+
+
+@*<div class="container-fluid nopadding" style="display:none;">
+		<div class="msisdn row">
+			<div class="col-lg-4">
+				<div class="row">
+					<div class="col-lg-2"><div class="form-group"><label style="margin-top:7px;">MSISDN</label></div></div>
+					<div class="col-lg-5"><input id="msisdn-number" type="text" class="form-control" value="@QuestionnaireContext.Current.CallMobile"></div>
+					<div class="col-lg-2">
+						<button type="button" title="ბალანსის გაგება" onclick="questionaireTree.getMsisdn($('#msisdn-number').val())" class="btn btn-primary">
+							<span class="glyphicon glyphicon-usd"></span>
+						</button>
+					</div>
+					<div class="col-lg-3"><label style="margin-top:7px;" id="lblBalance"></label></div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="row">
+					<div class="col-lg-1"><div class="form-group"><label>SMS</label></div></div>
+					<div class="col-lg-8"><input type="text" class="form-control" id="txt-custom-sms-sender" /></div>
+					<div class="col-lg-3"><button title="SMS გაგზავნა" type="button" onclick="questionaireTree.sendSms(true);" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span></button></div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="row">
+					<div class="col-lg-12 text-right"><div class="form-group"><button title="რეგისტრაცია" type="button" onclick="questionaireTree.registerMsisdn($('#msisdn-number').val(), $('#SelectedNodeId').val())" class="btn btn-primary"><span class="glyphicon glyphicon-saved"></span></button></div></div>
+				</div>
+			</div>
+		</div>
+	</div>*@
+
+
+<div class="container-fluid nopadding">
+	<div class="msisdn row">
+		<div class="col-lg-12">
+			<div class="row">
+
+				<div class="msisdn-internal-item msisdn-container">
+					<div class="double-labels">
+						<label>MSISDN</label>
+						<label class="lblBalanceInsider"></label>
+					</div>
+					<input id="msisdn-number" type="text" class="form-control" value="@QuestionnaireContext.Current.CallMobile">
+					<button type="button" title="ბალანსის გაგება" onclick="questionaireTree.getMsisdn($('#msisdn-number').val())" class="btn btn-primary">
+						<span class="glyphicon glyphicon-usd"></span>
+					</button>
+					<label id="lblBalance" class="lblBalanceInsider"></label>
+				</div>
+
+				<div class="msisdn-internal-item sms-sender-content">
+					<label>SMS</label>
+					<input type="text" class="form-control" id="txt-custom-sms-sender" />
+					<button title="SMS გაგზავნა" type="button" onclick="questionaireTree.sendSms(true);" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span></button>
+				</div>
+
+				<div class="msisdn-internal-item">
+					<div class="lblChanger"></div>
+					<div class="inputChanger"></div>
+					<button title="რეგისტრაცია" type="button" onclick="questionaireTree.registerMsisdn($('#msisdn-number').val(), $('#SelectedNodeId').val())" class="btn btn-primary btn-register"><span class="glyphicon glyphicon-saved"></span></button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

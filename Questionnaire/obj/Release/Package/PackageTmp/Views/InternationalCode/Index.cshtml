@@ -1,0 +1,70 @@
+﻿@model InternationalCodesViewModel
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="row">
+			<div class="col-lg-10" style="margin-top:9px;">საერთაშორისო კოდები</div>
+			<div class="col-lg-2 text-right">
+				<div class="checkbox" style="display:inline-block; margin-right:5px;">
+					<label>
+						<input class="notification-send-with-city-checkbox" type="checkbox" value="">
+						<span>ქალაქით</span>
+					</label>
+				</div>
+				<button id="btn-next" onclick="questionaireTree.sendInternationalCodeNotification();" class="btn btn-primary">SMS-ის გაგზავნა</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel-body">
+
+		<div class="row">
+			<div class="col-lg-12">
+
+				<div class="table-container">
+					<input type="hidden" id="send-notification-text" />
+					<input type="hidden" id="send-notification-with-city-text" />
+
+					<table id="international-code-table" class="selectable"></table>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+@section scripts{
+	<script>
+		$(function () {
+
+			$('.table-container').on('keyup', '.search-container input[type="text"]', function () {
+				$('#send-notification-text').val('');
+				$('#send-notification-with-city-text').val('');
+			});
+
+			$('#menu-international-code').addClass('active');
+
+			var internationalCodeHeaderTemplate = '<tr><th>Country Code</th><th>Country Name Geo</th><th>Country Name Eng</th><th>City Code</th><th>City Name Geo</th><th>City Name Eng</th></tr>';
+			var internationalCodeRowTemplate = '<tr data-notification="${SmsText}" data-notification-with-city="${SmsTextCity}"><td>${Cc}</td><td>${NameGeo}</td><td>${NameEng}</td><td>${TelCode}</td><td>${CityNameGeo}</td><td>${CityNameEng}</td></tr>';
+			var resultPerPage = 250;
+
+			var internationalCodeSource = JSON.parse('@Html.ParseToJson(Model.Codes)');
+
+			$('#international-code-table').createTable({
+				dataSource: internationalCodeSource,
+				resultPerPage: resultPerPage,
+				template: internationalCodeRowTemplate,
+				headerTemplate: internationalCodeHeaderTemplate,
+				onRowClick: function (e) {
+					var notification = $(e).data('notification');
+					var notificationWithCity = $(e).data('notification-with-city');
+					
+					$('#send-notification-text').val(notification);
+					$('#send-notification-with-city-text').val(notificationWithCity);
+				}
+			});
+
+		});
+	</script>
+}
